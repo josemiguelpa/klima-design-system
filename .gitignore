@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+storybook-static/
+*.tsbuildinfo
+
+# Caches
+.turbo/
+.cache/
+.eslintcache
+coverage/
+.astro/
+
+# Tarballs and logs
+*.tgz
+*.log
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local agent tooling
+.claude/settings.local.json
+.atl/
