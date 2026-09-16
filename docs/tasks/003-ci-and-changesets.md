@@ -14,6 +14,11 @@ Validar cada PR y preparar versionado independiente sin publicar todavía.
 - Añadir CI para install congelado, lint, typecheck, test y build.
 - Añadir validación de manifests/exports.
 - Documentar el flujo de release.
+- Revisar la vigencia de `scripts/verify-bootstrap.mjs` (TASK-001), que es un andamio temporal:
+  - Retirar la comprobación de directorios del workspace; `pnpm ls -r --depth -1` (TASK-002) la sustituye.
+  - Retirar las comprobaciones de Node y pnpm si la CI las garantiza mediante `.node-version` y `packageManager`.
+  - Conservar la comprobación de `git ls-files` (outputs, caches, tarballs y secretos), ejecutarla en CI y renombrar el script para reflejar su propósito, p. ej. `verify:repo-hygiene`.
+  - No dejar en el repositorio scripts con nombre `bootstrap` que ya no apliquen.
 
 ## Fuera de alcance
 

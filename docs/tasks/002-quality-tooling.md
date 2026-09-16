@@ -10,6 +10,7 @@ Establecer TypeScript estricto, lint y formato compartidos para el workspace.
 
 ## Alcance
 
+- Usar ECMAScript modules en todo el workspace: `"type": "module"` en el `package.json` raíz y en cada paquete; archivos de configuración en ESM.
 - Crear configuración compartida de TypeScript.
 - Configurar ESLint y formatter.
 - Añadir scripts raíz `lint`, `format:check` y `typecheck`.
