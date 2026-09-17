@@ -12,6 +12,7 @@ Validar cada PR y preparar versionado independiente sin publicar todavía.
 
 - Configurar Changesets con acceso público pendiente de activación.
 - Añadir CI para install congelado, lint, typecheck, test y build.
+- Añadir una imagen Docker reproducible para ejecutar la verificación en Linux desde Windows o macOS, pendiente desde TASK-002.
 - Añadir validación de manifests/exports.
 - Documentar el flujo de release.
 - Revisar la vigencia de `scripts/verify-bootstrap.mjs` (TASK-001), que es un andamio temporal:
