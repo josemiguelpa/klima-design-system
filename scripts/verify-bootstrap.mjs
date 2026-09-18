@@ -93,10 +93,14 @@ function checkNode(pkg) {
 
 function checkPnpm(pkg) {
   const match = /^pnpm@(\d+\.\d+\.\d+)(?:\+.*)?$/.exec(pkg.packageManager ?? "");
-  if (!match) return [false, `packageManager must pin an exact pnpm version, got "${pkg.packageManager}"`];
+  if (!match)
+    return [false, `packageManager must pin an exact pnpm version, got "${pkg.packageManager}"`];
   const current = detectPnpmVersion();
   const ok = current === match[1];
-  return [ok, `pnpm ${current} ${ok ? "matches" : "does not match"} packageManager pnpm@${match[1]}`];
+  return [
+    ok,
+    `pnpm ${current} ${ok ? "matches" : "does not match"} packageManager pnpm@${match[1]}`,
+  ];
 }
 
 function checkDirectories() {
@@ -133,12 +137,7 @@ function checkTrackedFiles() {
 }
 
 const pkg = JSON.parse(readFileSync(join(rootDir, "package.json"), "utf8"));
-const checks = [
-  () => checkNode(pkg),
-  () => checkPnpm(pkg),
-  checkDirectories,
-  checkTrackedFiles,
-];
+const checks = [() => checkNode(pkg), () => checkPnpm(pkg), checkDirectories, checkTrackedFiles];
 
 let failed = false;
 for (const check of checks) {

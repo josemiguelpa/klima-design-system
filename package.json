@@ -1,11 +1,22 @@
 {
   "name": "klima-design-system",
   "private": true,
+  "type": "module",
   "packageManager": "pnpm@12.4.2",
   "engines": {
     "node": ">=24.0.0 <25.0.0"
   },
   "scripts": {
-    "verify:bootstrap": "node scripts/verify-bootstrap.mjs"
+    "verify:bootstrap": "node scripts/verify-bootstrap.mjs",
+    "lint": "pnpm -r --if-present run lint",
+    "format:check": "prettier --check .",
+    "typecheck": "pnpm -r --if-present run typecheck"
+  },
+  "devDependencies": {
+    "@klima-ds/eslint-config": "workspace:*",
+    "@klima-ds/typescript-config": "workspace:*",
+    "eslint": "^10.10.0",
+    "prettier": "^3.9.6",
+    "typescript": "^6.0.3"
   }
 }

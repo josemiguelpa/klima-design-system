@@ -25,7 +25,7 @@ No mapear automáticamente un nombre antiguo si su significado cambió. Registra
 - Mantener temporalmente formas snake_case como adapter si existen consumidores:
 
 ```ts
-createTheme({ primary_color, secondary_color })
+createTheme({ primary_color, secondary_color });
 ```
 
 - La API nueva puede utilizar camelCase y un contrato más rico.
@@ -46,11 +46,11 @@ El paquete UI experimental no se considera API legado porque no fue adoptado. Su
 
 Antes del primer release estable, mantener un archivo generado o tabla con:
 
-| Contrato anterior | Contrato nuevo | Estado | Retiro esperado |
-| --- | --- | --- | --- |
-| Variable CSS | Token Klima | compatible/deprecated/manual | versión |
-| Import TS | Import nuevo | compatible/deprecated/manual | versión |
-| Nombre de icono | Nombre corregido | alias/manual | versión |
+| Contrato anterior | Contrato nuevo   | Estado                       | Retiro esperado |
+| ----------------- | ---------------- | ---------------------------- | --------------- |
+| Variable CSS      | Token Klima      | compatible/deprecated/manual | versión         |
+| Import TS         | Import nuevo     | compatible/deprecated/manual | versión         |
+| Nombre de icono   | Nombre corregido | alias/manual                 | versión         |
 
 ## Versionado
 
