@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Construir un sistema de diseño público, escalable y multimarca bajo Klima. Debe entregar tokens, temas, iconos y componentes reutilizables. Solé será su primera implementación y debe existir un camino razonable de compatibilidad para aplicaciones Solenium actuales.
+Construir un sistema de diseño público, escalable y multimarca bajo Klima. Debe entregar tokens, temas, iconos y componentes reutilizables. Solé será su primera implementación. `@klima-ds` define un contrato nuevo y no promete compatibilidad con los paquetes `@solenium-software`; las aplicaciones existentes deberán migrar de forma explícita.
 
 ## Escenario de consumo
 
@@ -39,9 +39,10 @@ Figma expresa la intención visual actual, pero necesita normalización antes de
 
 - Crear un repositorio nuevo, tentativamente `klima-design-system`.
 - No fusionar ciegamente los repositorios anteriores.
-- Migrar selectivamente conocimiento, SVG, contratos compatibles e infraestructura útil.
-- Mantener los repositorios anteriores disponibles durante la transición.
+- Migrar selectivamente conocimiento, SVG e infraestructura útil; no copiar contratos por obligación de compatibilidad.
+- Mantener los repositorios anteriores como referencias históricas y de migración, no como dependencias runtime.
 - Establecer Git como fuente versionada del artefacto técnico y Figma como fuente de intención de diseño; una sincronización controlada conectará ambos.
+- Ofrecer una guía de migración y declarar explícitamente los límites del clean break.
 
 ## Decisiones del propietario
 

@@ -11,7 +11,7 @@ Generar un tema runtime seguro a partir de colores de marca sin depender de DOM 
 ## Alcance
 
 - API pura con nombres camelCase.
-- Adapter temporal para `primary_color`/`secondary_color`.
+- No incluye adapter para nombres legacy; las aplicaciones migran a camelCase antes de invocar la API.
 - Rechazar colores inválidos.
 - Elegir foreground por contraste medido.
 - Retornar advertencias o errores estructurados para combinaciones inseguras.

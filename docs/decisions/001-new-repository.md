@@ -6,7 +6,7 @@ Aceptado.
 
 ## Decisión
 
-Crear un monorepo nuevo para Klima. Los repositorios `solenium-design-system` y `solenium-components` permanecen como referencias de migración y compatibilidad temporal.
+Crear un monorepo nuevo para Klima. Los repositorios `solenium-design-system` y `solenium-components` permanecen como referencias históricas y de migración, pero el contrato `@klima-ds` no será compatible hacia atrás con ellos.
 
 ## Motivos
 
@@ -17,6 +17,8 @@ Crear un monorepo nuevo para Klima. Los repositorios `solenium-design-system` y 
 
 ## Consecuencias
 
-- El código se migra selectivamente con revisión.
+- El código y los activos se migran selectivamente con revisión.
 - No se arrastran `.git`, caches, tarballs ni outputs generados.
+- No se publican aliases ni un paquete de compatibilidad.
+- La migración se explica mediante una frontera documental, no mediante infraestructura runtime.
 - La historia de decisiones se preserva mediante estos documentos, no fusionando historiales completos.

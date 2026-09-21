@@ -5,7 +5,7 @@
 - Bootstrap del workspace.
 - Configuración compartida.
 - CI, Changesets y validación de publicación.
-- Registro de contratos legacy.
+- Auditoría de referencias legacy y definición de la frontera de migración.
 
 Salida: monorepo vacío pero confiable y publicable.
 
@@ -16,9 +16,9 @@ Salida: monorepo vacío pero confiable y publicable.
 - Semánticos light/dark.
 - Build CSS/TypeScript.
 - Adapter shadcn.
-- Aliases de compatibilidad.
+- Guía de migración y límites del clean break.
 
-Salida: una aplicación fixture puede adoptar el nuevo tema sin componentes.
+Salida: una aplicación fixture puede adoptar el nuevo tema sin componentes y conoce los cambios explícitos requeridos desde el contrato legacy.
 
 ## Milestone 2 — Runtime white-label
 
@@ -37,7 +37,7 @@ Salida: tenant theme seguro y desacoplado de shadcn.
 - Paquete React con exports individuales.
 - Tests de accesibilidad, atributos y tree-shaking.
 
-Salida: reemplazo funcional del paquete React anterior.
+Salida: una implementación React nueva, con una guía de migración explícita; no es un reemplazo directo del paquete React anterior.
 
 ## Milestone 4 — Iconos Vue, Astro y Vanilla
 

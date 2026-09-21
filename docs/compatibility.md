@@ -1,59 +1,54 @@
-# Estrategia de compatibilidad
+# Política de clean break y migración
 
-## Principio
+## Decisión vigente
 
-La compatibilidad es importante, pero no debe congelar la arquitectura nueva. Se conservarán contratos usados y verificables; no se prometerá compatibilidad con archivos internos no exportados.
+`@klima-ds` es un contrato nuevo. Los paquetes Klima no ofrecen compatibilidad hacia atrás con `@solenium-software`, aunque reutilicen conocimiento o activos auditados de esos repositorios.
+
+Esto implica:
+
+- no publicar aliases legacy de CSS, TypeScript ni iconos;
+- no crear un paquete `@klima-ds/compatibility-solenium`;
+- no importar CSS legacy desde ningún entrypoint Klima;
+- no conservar exports, nombres o estructuras anteriores solo por compatibilidad;
+- no asumir que cargar simultáneamente CSS legacy y Klima sea un escenario soportado.
+
+## Qué sí ofrecemos
+
+La compatibilidad se sustituye por una frontera de migración documentada en [`docs/migration-from-solenium.md`](./migration-from-solenium.md). Cada migración debe:
+
+1. identificar los imports, variables, iconos y componentes usados por la aplicación;
+2. elegir el contrato Klima equivalente cuando exista una equivalencia revisada;
+3. adaptar manualmente los casos sin equivalencia directa;
+4. validar estilos, accesibilidad y comportamiento en la aplicación consumidora.
+
+Las equivalencias documentadas son orientación de migración, no una promesa de API compatible.
 
 ## Repositorios anteriores
 
-- No reciben nuevas funcionalidades salvo correcciones críticas durante la migración.
-- Se mantienen disponibles hasta migrar los consumidores conocidos.
-- La deprecación pública solo ocurre cuando existe guía, telemetría o inventario de adopción suficiente.
+- `solenium-design-system` y `solenium-components` permanecen como referencias históricas y fuentes de auditoría.
+- No reciben nuevas funcionalidades por parte de este repositorio.
+- Pueden mantenerse durante la transición de aplicaciones, pero no son dependencias de los paquetes Klima.
+- Los hechos históricos deben distinguirse de la política vigente: que un nombre o variable haya existido no implica que Klima deba conservarlo.
 
-## CSS
+## CSS y tokens
 
-Crear aliases deprecated cuando el significado sea equivalente:
+Los tokens Klima usan el prefijo `--klima-` y una semántica propia. No se generan aliases como `--brand-primary: var(--klima-...)`. Los nombres ambiguos, visuales o mal formados deben corregirse en el punto de migración.
 
-```css
---brand-primary: var(--klima-color-action-primary);
-```
+La coexistencia temporal de CSS legacy y Klima queda bajo responsabilidad de la aplicación. Debe evitarse la colisión de variables y no puede asumirse que ambos contratos tengan la misma semántica.
 
-No mapear automáticamente un nombre antiguo si su significado cambió. Registrar esos casos en una tabla de migración.
+## TypeScript e iconos
 
-## TypeScript
-
-- Mantener temporalmente formas snake_case como adapter si existen consumidores:
-
-```ts
-createTheme({ primary_color, secondary_color });
-```
-
-- La API nueva puede utilizar camelCase y un contrato más rico.
-- Emitir warnings solo en desarrollo y únicamente cuando aporten una acción clara.
-
-## Iconos
-
-- Mantener aliases para nombres corregidos durante al menos un ciclo mayor.
-- Ejemplo: exportar `FingerCricle` como alias deprecated de `FingerCircle`.
-- Preservar el aspecto visual de iconos existentes salvo cambio explícito aprobado.
-- Los logos deben separarse del catálogo de iconos funcionales cuando tengan reglas de color distintas.
+- Los imports deben cambiarse a los exports Klima definidos para cada paquete.
+- Las formas antiguas, incluidas variantes `snake_case`, no se mantienen mediante adapters publicados.
+- Los nombres de iconos corregidos forman parte del catálogo nuevo. Los nombres antiguos se registran como notas de migración, no como aliases deprecated.
+- La procedencia y licencia de los SVG se verifica antes de su publicación; esa revisión es independiente de la migración de nombres.
 
 ## Componentes
 
-El paquete UI experimental no se considera API legado porque no fue adoptado. Sus ideas pueden reutilizarse, pero no se requiere conservar su `Header` ni su estructura exacta.
+El paquete UI experimental no se considera una API legacy adoptada. Sus ideas pueden reutilizarse, pero no se requiere conservar su `Header`, su estructura ni sus props.
 
-## Matriz de migración
+## Versionado y documentación
 
-Antes del primer release estable, mantener un archivo generado o tabla con:
+Los paquetes pueden comenzar en `0.x` mientras se validan con aplicaciones reales, pero cada cambio de contrato debe documentarse. Changesets registra releases; no convierte los paquetes Klima en compatibles con los paquetes anteriores.
 
-| Contrato anterior | Contrato nuevo   | Estado                       | Retiro esperado |
-| ----------------- | ---------------- | ---------------------------- | --------------- |
-| Variable CSS      | Token Klima      | compatible/deprecated/manual | versión         |
-| Import TS         | Import nuevo     | compatible/deprecated/manual | versión         |
-| Nombre de icono   | Nombre corregido | alias/manual                 | versión         |
-
-## Versionado
-
-- Iniciar paquetes nuevos en `0.x` mientras el contrato se valida con aplicaciones reales.
-- No interpretar `0.x` como permiso para romper consumidores sin guía.
-- Usar Changesets para toda modificación publicable.
+[`docs/migration-from-solenium.md`](./migration-from-solenium.md) debe registrar solo equivalencias respaldadas por evidencia. Cuando no exista equivalencia, debe indicarse la adaptación manual requerida o que el caso queda fuera de alcance.
