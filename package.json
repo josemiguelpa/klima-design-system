@@ -7,16 +7,24 @@
     "node": ">=24.0.0 <25.0.0"
   },
   "scripts": {
-    "verify:bootstrap": "node scripts/verify-bootstrap.mjs",
+    "verify:repo-hygiene": "node scripts/verify-repo-hygiene.mjs",
+    "verify:manifests": "node scripts/verify-manifests.mjs",
     "lint": "pnpm -r --if-present run lint",
     "format:check": "prettier --check .",
-    "typecheck": "pnpm -r --if-present run typecheck"
+    "typecheck": "pnpm -r --if-present run typecheck",
+    "test": "pnpm -r --if-present run test",
+    "build": "pnpm -r --if-present run build",
+    "changeset": "changeset"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.5",
+    "@changesets/cli": "^3.0.3",
     "@klima-ds/eslint-config": "workspace:*",
     "@klima-ds/typescript-config": "workspace:*",
     "eslint": "^10.10.0",
     "prettier": "^3.9.6",
-    "typescript": "^6.0.3"
+    "publint": "^0.3.24",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.0"
   }
 }
