@@ -84,3 +84,7 @@ El proyecto no versiona `.npmrc`: la configuración de pnpm vive en `pnpm-worksp
   - Existen `apps`, `packages`, `tooling` y `fixtures`.
   - `git ls-files` no contiene outputs, caches, tarballs ni secretos.
 - La verificación de reconocimiento de paquetes del workspace se hace en TASK-002 con `pnpm ls -r --depth -1` (no con `pwd`, que no es portable a Windows).
+
+## Nota posterior (TASK-003)
+
+`verify:bootstrap` / `scripts/verify-bootstrap.mjs` fue retirado y renombrado a `verify:repo-hygiene` / `scripts/verify-repo-hygiene.mjs` en TASK-003. El nuevo script solo conserva la comprobación de `git ls-files`. Las comprobaciones de Node y pnpm se retiraron porque CI las garantiza con `.node-version` y `packageManager`. La comprobación de directorios del workspace también se retiró, pero `pnpm ls -r --depth -1` no la sustituye por completo mientras `apps/` y `packages/` estén vacíos: ese comando solo lista directorios con `package.json`. Ver `docs/release-process.md` para el detalle del hueco y cuándo se cierra. Este archivo se conserva sin modificar como registro histórico de lo entregado en TASK-001.

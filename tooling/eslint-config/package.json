@@ -1,0 +1,21 @@
+{
+  "name": "@klima-ds/eslint-config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./eslint.config.js",
+  "exports": {
+    ".": "./eslint.config.js"
+  },
+  "files": [
+    "eslint.config.js"
+  ],
+  "dependencies": {
+    "@eslint/js": "^10.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "typescript-eslint": "^8.70.0"
+  },
+  "peerDependencies": {
+    "eslint": "^10.0.0"
+  }
+}

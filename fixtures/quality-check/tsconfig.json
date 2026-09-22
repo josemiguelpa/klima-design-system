@@ -1,0 +1,8 @@
+{
+  "extends": "@klima-ds/typescript-config/library.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src"
+  },
+  "include": ["src"]
+}

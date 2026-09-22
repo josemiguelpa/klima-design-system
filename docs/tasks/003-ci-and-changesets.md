@@ -31,3 +31,7 @@ Validar cada PR y preparar versionado independiente sin publicar todavía.
 - Workflow válido y con permisos mínimos.
 - `pnpm changeset` está disponible.
 - La validación local equivalente a CI pasa.
+
+## Nota de implementación
+
+El alcance afirma que `pnpm ls -r --depth -1` sustituye la comprobación de directorios del workspace. Al implementar se verificó que eso no es cierto mientras `apps/` y `packages/` estén vacíos: ese comando solo lista directorios que contienen un `package.json`. La comprobación se retiró igualmente y el hueco quedó documentado en `docs/release-process.md`, que explica cuándo se cierra.
