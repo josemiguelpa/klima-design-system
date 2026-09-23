@@ -203,10 +203,6 @@ primitiva de un token semántico.
 - Las convenciones para conceptos todavía no modelados se añadirán cuando haya
   casos de uso reales, sin cambiar la gramática léxica.
 
-## Decisiones pendientes
-
-- Organización física de archivos.
-
 ### API del validador y formato de diagnósticos
 
 #### Decisión
@@ -379,6 +375,125 @@ dependencia del build ni en la fuente técnica de releases.
 - La procedencia basada en nodos queda fuera del contrato mínimo de variables.
 - La normalización de metadata compartida a nivel de documento se reconsiderará
   solo si la repetición demuestra ser un problema real.
+
+### Organización física de archivos
+
+#### Decisión
+
+Organizar los archivos fuente primero por capa lógica y después por dominio,
+marca o componente. Un manifiesto explícito declara los archivos participantes
+y su capa; el ensamblado produce un único documento lógico antes de validar o
+resolver referencias.
+
+#### Reglas normativas
+
+- Los archivos fuente DTCG DEBEN vivir bajo `src/tokens/`.
+- Las primitivas globales DEBEN organizarse en `src/tokens/global/` y dividirse
+  por dominio cuando exista más de uno.
+- Las primitivas de marca DEBEN organizarse en
+  `src/tokens/brands/<marca>/` y dividirse por dominio.
+- Los tokens semánticos DEBEN organizarse en `src/tokens/semantic/` y dividirse
+  por dominio.
+- Los tokens de componente DEBEN organizarse en
+  `src/tokens/components/` y dividirse por componente.
+- Cada archivo DEBE declarar rutas lógicas completas. Los nombres de carpetas y
+  archivos NO DEBEN añadir segmentos implícitos a una ruta.
+- Un manifiesto explícito DEBE enumerar cada archivo fuente y declarar su capa.
+- El ensamblado NO DEBE depender de recorridos implícitos del sistema de
+  archivos ni del orden alfabético de los nombres.
+- Todos los archivos DEBEN ensamblarse mediante una combinación profunda antes
+  de resolver aliases y ejecutar las validaciones globales.
+- Dos archivos NO DEBEN declarar la misma ruta lógica; toda colisión DEBE
+  rechazarse como error.
+- Los aliases y `$ref` DEBEN continuar apuntando a rutas del documento lógico,
+  nunca a rutas de archivos.
+- El validador, los tipos y los puntos de entrada del paquete DEBEN permanecer
+  fuera de `src/tokens/`.
+- Los artefactos generados NO DEBEN almacenarse junto a los archivos fuente
+  DTCG ni editarse manualmente.
+
+#### Estructura conceptual mínima
+
+```text
+packages/tokens/
+├── src/
+│   ├── tokens/
+│   │   ├── global/
+│   │   │   └── color.json
+│   │   ├── brands/
+│   │   │   └── sole/
+│   │   │       └── color.json
+│   │   ├── semantic/
+│   │   │   └── color.json
+│   │   └── components/
+│   │       └── button.json
+│   ├── manifest.ts
+│   ├── validator.ts
+│   ├── types.ts
+│   └── index.ts
+└── package.json
+```
+
+#### Ejemplo mínimo
+
+`src/tokens/global/color.json` declara la ruta completa:
+
+```json
+{
+  "color": {
+    "neutral": {
+      "950": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.1, 0.1, 0.1],
+          "alpha": 1
+        }
+      }
+    }
+  }
+}
+```
+
+Un token ubicado en `src/tokens/semantic/color.json` lo referencia por su ruta
+lógica, sin conocer el archivo que lo contiene:
+
+```json
+{
+  "color": {
+    "text": {
+      "primary": {
+        "$type": "color",
+        "$value": "{color.neutral.950}"
+      }
+    }
+  }
+}
+```
+
+#### Justificación
+
+La separación refleja las capas aprobadas y mantiene localizados los cambios
+por dominio, marca o componente. El manifiesto hace explícito qué fuentes forman
+el paquete y evita que el resultado dependa accidentalmente del contenido o del
+orden de un directorio. Ensamblar antes de validar conserva un único espacio de
+nombres, permite detectar colisiones y mantiene los aliases desacoplados de la
+distribución física.
+
+Esta estructura introduce más archivos y exige mantener el manifiesto, pero
+reduce conflictos de edición y permite revisar cada cambio dentro de su frontera
+arquitectónica.
+
+#### Aspectos aplazados
+
+- Los dominios y componentes concretos se crearán únicamente cuando existan
+  tokens reales para ellos.
+- La forma ejecutable del manifiesto y del ensamblador se definirá durante la
+  implementación.
+- La ubicación y el formato final de los artefactos generados se definirán en
+  la tarea de build correspondiente.
+- La proyección física de modos de marca o tema se definirá cuando se modele el
+  primer caso real, sin cambiar la separación principal por capas.
 
 ## Alcance
 
