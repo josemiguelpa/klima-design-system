@@ -1,0 +1,11 @@
+{
+  "button": {
+    "primary": {
+      "background": {
+        "default": { "$type": "color", "$value": "{color.action.primary}" },
+        "hover": { "$type": "color", "$value": "{brand.sole.green.600}" }
+      },
+      "foreground": { "$type": "color", "$value": "{color.neutral.0}" }
+    }
+  }
+}

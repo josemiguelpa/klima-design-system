@@ -1,0 +1,7 @@
+{
+  "color": {
+    "Bad_Name": { "$type": "color", "$value": "{missing.token}" },
+    "cycle": { "$type": "color", "$value": "{color.cycle}" },
+    "wrong": { "$type": "number", "$value": "{color.Bad_Name}" }
+  }
+}

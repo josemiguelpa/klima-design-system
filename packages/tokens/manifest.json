@@ -1,0 +1,10 @@
+{
+  "version": "2025.10",
+  "layers": ["global", "brand", "semantic", "component"],
+  "sources": [
+    { "layer": "global", "path": "src/tokens/global/color.json" },
+    { "layer": "brand", "path": "src/tokens/brands/sole/color.json" },
+    { "layer": "semantic", "path": "src/tokens/semantic/color.json" },
+    { "layer": "component", "path": "src/tokens/components/button.json" }
+  ]
+}

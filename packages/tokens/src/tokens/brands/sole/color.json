@@ -1,0 +1,12 @@
+{
+  "brand": {
+    "sole": {
+      "green": {
+        "600": {
+          "$type": "color",
+          "$value": { "colorSpace": "srgb", "components": [0.1, 0.6, 0.3], "alpha": 1 }
+        }
+      }
+    }
+  }
+}

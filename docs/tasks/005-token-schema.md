@@ -57,8 +57,8 @@ el modelo general de tokens cuando se cierren todos los puntos pendientes.
   preservarse aunque una herramienta no comprenda su contenido.
 - Ningún consumidor debe necesitar `$extensions` para interpretar correctamente
   el tipo o el valor de un token.
-- La estructura concreta para registrar procedencia de Figma se definirá en
-  TASK-006 con identificadores reales. Git continúa siendo la fuente de verdad.
+- TASK-005 define la estructura para registrar procedencia de Figma; TASK-006 incorporará
+  identificadores reales. Git continúa siendo la fuente de verdad.
 
 ```json
 {

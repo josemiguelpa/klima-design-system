@@ -1,0 +1,10 @@
+{
+  "color": {
+    "background": {
+      "canvas": { "$type": "color", "$value": "{color.neutral.0}" },
+      "surface": { "$type": "color", "$value": "{color.neutral.0}" }
+    },
+    "text": { "primary": { "$type": "color", "$value": "{color.neutral.950}" } },
+    "action": { "primary": { "$type": "color", "$value": "{brand.sole.green.600}" } }
+  }
+}

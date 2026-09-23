@@ -209,6 +209,24 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3
 
+  packages/tokens:
+    devDependencies:
+      '@klima-ds/eslint-config':
+        specifier: workspace:*
+        version: link:../../tooling/eslint-config
+      '@klima-ds/typescript-config':
+        specifier: workspace:*
+        version: link:../../tooling/typescript-config
+      eslint:
+        specifier: ^10.10.0
+        version: 10.10.0(supports-color@7.2.0)
+      typescript:
+        specifier: ^6.0.3
+        version: 6.0.3
+      vitest:
+        specifier: ^5.0.0
+        version: 5.0.1(vite@8.3.0(yaml@2.9.1))
+
   tooling/eslint-config:
     dependencies:
       '@eslint/js':
