@@ -18,7 +18,7 @@ Transformar los tokens DTCG en outputs deterministas consumibles.
 
 ## Fuera de alcance
 
-- Tema Solé completo, aliases legacy y shadcn.
+- Tema Solé completo y shadcn.
 
 ## Criterios de aceptación
 

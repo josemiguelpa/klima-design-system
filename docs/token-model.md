@@ -90,7 +90,8 @@ Usar un prefijo neutral para evitar colisiones:
 
 - No usar nombres de color visual como API semántica (`text-gray`, `button-green`).
 - No mezclar reset, utilities o selectores globales en el paquete de tokens.
-- Los aliases antiguos viven en compatibilidad y tienen fecha/versión de retiro.
+- Los aliases internos de DTCG y Figma están permitidos para expresar relaciones entre tokens, por ejemplo `{brand.sole.green.600}`; no son aliases públicos legacy.
+- Los aliases públicos legacy de CSS o TypeScript están prohibidos. Las diferencias con el contrato anterior se resuelven mediante migración explícita y documentación.
 - Toda pareja foreground/background relevante debe validarse por contraste.
 - No generar estados hover/active mediante mezclas arbitrarias sin validación de diseño y accesibilidad.
 - Tipografía, spacing, radius, shadow y motion siguen el mismo modelo por capas.

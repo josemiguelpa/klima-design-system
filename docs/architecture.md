@@ -18,7 +18,7 @@ packages/
   icons-vue/
   icons-astro/
   react/
-  compatibility-solenium/
+  # No se crea un paquete de compatibilidad legacy.
 
 tooling/
   eslint-config/
@@ -39,7 +39,7 @@ tokens <- themes <- shadcn
 tokens <- theme-runtime
 tokens + themes + icons-react <- react
 icons-core -> icons-react | icons-vue | icons-astro
-new packages -> compatibility-solenium
+new packages do not depend on legacy packages
 ```
 
 No debe existir dependencia desde tokens hacia frameworks o componentes.
@@ -56,7 +56,7 @@ No debe existir dependencia desde tokens hacia frameworks o componentes.
 | `@klima-ds/icons-vue`              | Componentes Vue sin dependencia de React            |
 | `@klima-ds/icons-astro`            | Componentes Astro sin dependencia de React/Vue      |
 | `@klima-ds/react`                  | Componentes React estilizados con tokens semánticos |
-| `@klima-ds/compatibility-solenium` | Aliases y ayudas de migración temporal              |
+| Guía de migración (documentación) | Límites, pasos y equivalencias revisadas manualmente |
 
 ## API de temas
 
@@ -72,14 +72,7 @@ Configuración de tailwind:
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 ```
 
-Durante la migración pueden haber proyectos que deban soportar ambos:
-
-```css
-[data-theme="dark"],
-.dark {
-  /* variables oscuras */
-}
-```
+La coexistencia de contratos legacy y Klima no está soportada por los paquetes nuevos. Una aplicación que necesite migrar por etapas debe aislar y coordinar explícitamente sus hojas de estilo; Klima no importará CSS legacy ni ofrecerá aliases globales.
 
 Los colores puntuales de otras marcas se exponen como primitivas explícitas; no cambian el tema activo.
 
@@ -99,7 +92,7 @@ Los colores puntuales de otras marcas se exponen como primitivas explícitas; no
 - `currentColor` para fills y paths.
 - Export individual por archivo y barrel conveniente.
 - ESM, `sideEffects: false` y fixtures que inspeccionan el bundle final.
-- Alias de nombres antiguos para errores ortográficos, marcados deprecated.
+- Los nombres corregidos son parte del contrato nuevo; la migración desde nombres antiguos se documenta, pero no se publican aliases.
 
 ## Storybook
 

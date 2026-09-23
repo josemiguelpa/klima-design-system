@@ -18,8 +18,9 @@ Determinar qué SVG pueden migrarse y publicarse legalmente antes de copiarlos a
 - Inventariar 514 SVG, hashes, nombres, atributos y categoría propuesta.
 - Separar iconos funcionales, personalizados y logos.
 - Registrar fuente/licencia conocida o estado `unknown`.
-- Identificar nombres erróneos y aliases requeridos.
+- Identificar nombres erróneos y registrar las notas de migración hacia los nombres corregidos; no crear aliases.
 - Bloquear publicación de activos sin procedencia confirmada.
+- Separar la decisión de publicación de la decisión de nomenclatura; un nombre corregido no implica compatibilidad con el nombre anterior.
 
 ## Fuera de alcance
 
