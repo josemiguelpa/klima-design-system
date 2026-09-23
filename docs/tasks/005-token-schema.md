@@ -205,9 +205,100 @@ primitiva de un token semántico.
 
 ## Decisiones pendientes
 
-- API del validador y formato de diagnósticos.
 - Metadata concreta de procedencia de Figma.
 - Organización física de archivos.
+
+### API del validador y formato de diagnósticos
+
+#### Decisión
+
+El validador se expondrá como una función pura que recibe un documento
+desconocido y devuelve el resultado completo de la validación, sin mutar ni
+aplanar el documento fuente.
+
+#### Reglas normativas
+
+- La API DEBE devolver todos los diagnósticos detectables en una ejecución.
+- El resultado DEBE indicar si el documento es válido mediante `valid`.
+- `valid` DEBE ser `false` cuando exista al menos un diagnóstico con severidad
+  `error`.
+- Cada diagnóstico DEBE incluir `severity`, `code`, `path` y `message`.
+- `severity` DEBE ser `error` o `warning`.
+- `code` DEBE ser estable y apto para automatización; los consumidores NO
+  DEBEN depender del texto de `message` para clasificar errores.
+- `path` DEBE identificar la ruta lógica completa del token afectado.
+- `property` PUEDE identificar la propiedad concreta afectada, como `$type`,
+  `$value` o `$ref`.
+- Los incumplimientos del contrato de tokens DEBEN producir diagnósticos de
+  error. Esto incluye nombres inválidos, tipos no admitidos, aliases rotos,
+  ciclos, incompatibilidades de tipo y dependencias inversas entre capas.
+- La resolución de referencias PUEDE utilizarse internamente para validar,
+  pero NO DEBE modificar ni reemplazar las referencias del documento fuente.
+- Las excepciones quedan reservadas para errores de uso de la API o fallos
+  internos inesperados; un documento inválido NO DEBE interrumpir la API con
+  una excepción como mecanismo normal de reporte.
+
+#### Firma conceptual mínima
+
+```ts
+type DiagnosticSeverity = "error" | "warning";
+
+interface Diagnostic {
+  severity: DiagnosticSeverity;
+  code: string;
+  path: string;
+  property?: string;
+  message: string;
+}
+
+interface ValidationResult {
+  valid: boolean;
+  diagnostics: Diagnostic[];
+}
+
+function validateTokenDocument(document: unknown): ValidationResult;
+```
+
+#### Ejemplos mínimos de diagnósticos
+
+Alias inexistente:
+
+```json
+{
+  "severity": "error",
+  "code": "alias.target-not-found",
+  "path": "color.text.primary",
+  "property": "$value",
+  "message": "Alias target does not exist: {color.neutral.950}"
+}
+```
+
+Nombre inválido:
+
+```json
+{
+  "severity": "error",
+  "code": "token.invalid-name",
+  "path": "color.Neutral.950",
+  "message": "Token path segments must use lowercase kebab-case or canonical numeric segments"
+}
+```
+
+#### Justificación
+
+El resultado agregado permite corregir varios problemas en una sola ejecución
+y sirve tanto para CI como para tests y futuras integraciones con editores.
+Separar códigos estables de mensajes legibles evita acoplar automatizaciones al
+texto. La ruta lógica completa mantiene el criterio de aceptación existente y
+es independiente de la organización física de archivos.
+
+#### Aspectos aplazados
+
+- La lista completa y definitiva de códigos de diagnóstico.
+- Posiciones de línea y columna dentro de archivos fuente.
+- Diagnósticos enriquecidos con rutas de archivo después del ensamblado.
+- Opciones de severidad, filtros o modos de validación configurables.
+- Un formato de serialización distinto de la interfaz TypeScript conceptual.
 
 ## Alcance
 
