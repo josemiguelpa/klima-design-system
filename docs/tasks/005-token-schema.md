@@ -135,9 +135,76 @@ JSON Pointer sin introducir resolución recursiva dentro de valores compuestos.
 Las referencias incrustadas dentro de `shadow` u otros valores compuestos quedan
 aplazadas hasta que exista un caso de uso real.
 
+### Gramática de nombres
+
+#### Decisión
+
+Usar rutas separadas por puntos. Cada segmento debe ser una palabra en
+minúsculas y `kebab-case` o un número decimal canónico. La gramática define la
+forma común de los nombres y se complementa con reglas estructurales para cada
+capa, sin añadir prefijos artificiales como `primitive` o `semantic`.
+
+#### Reglas normativas
+
+- Una ruta DEBE contener al menos dos segmentos separados por `.`.
+- Un segmento de palabra DEBE cumplir
+  `[a-z][a-z0-9]*(?:-[a-z0-9]+)*`.
+- Un segmento numérico DEBE cumplir `0|[1-9][0-9]*`; los ceros iniciales no
+  están permitidos salvo en `0`.
+- Los nombres DEBEN escribirse en minúsculas. Las palabras compuestas DEBEN
+  usar `kebab-case`.
+- Los nombres NO DEBEN contener espacios, `_`, `/`, `{}`, `}`, `#`, segmentos
+  vacíos ni caracteres en mayúscula.
+- Ningún segmento PUEDE comenzar con `$`; los nombres reservados por DTCG no
+  forman parte de una ruta de token.
+- Las primitivas de marca DEBEN seguir `brand.<marca>.<concepto>...`.
+- Los tokens de componente DEBEN comenzar por el nombre del componente y
+  continuar con su variante, parte, propiedad o estado según corresponda.
+- Las primitivas globales y los tokens semánticos DEBEN comenzar por su dominio,
+  por ejemplo `color`, `space`, `radius` o `font`.
+- La capa exacta de una primitiva global o un token semántico NO DEBE inferirse
+  únicamente desde su nombre; la organización lógica del documento determina
+  esa clasificación.
+
+#### Ejemplo mínimo
+
+```text
+color.neutral.0
+space.4
+brand.sole.green.600
+color.background.canvas
+button.primary.background.hover
+```
+
+Los siguientes nombres son inválidos:
+
+```text
+color.Neutral.950
+font.fontSize.200
+space.04
+button_primary.background
+color..text
+```
+
+#### Justificación
+
+Esta gramática conserva los nombres ya definidos en el modelo de tokens, genera
+rutas legibles y deterministas, y admite escalas numéricas sin relajar el resto
+del identificador. Las reglas por capa comunican intención sin convertir la API
+en una jerarquía redundante ni asumir que el nombre basta para distinguir una
+primitiva de un token semántico.
+
+#### Aspectos aplazados
+
+- La lista cerrada de dominios admitidos se definirá cuando exista el inventario
+  real de tokens.
+- La clasificación mecánica de cada ruta por capa se concretará junto con la
+  organización lógica y física de archivos.
+- Las convenciones para conceptos todavía no modelados se añadirán cuando haya
+  casos de uso reales, sin cambiar la gramática léxica.
+
 ## Decisiones pendientes
 
-- Gramática de nombres.
 - API del validador y formato de diagnósticos.
 - Metadata concreta de procedencia de Figma.
 - Organización física de archivos.
