@@ -205,7 +205,6 @@ primitiva de un token semántico.
 
 ## Decisiones pendientes
 
-- Metadata concreta de procedencia de Figma.
 - Organización física de archivos.
 
 ### API del validador y formato de diagnósticos
@@ -299,6 +298,87 @@ es independiente de la organización física de archivos.
 - Diagnósticos enriquecidos con rutas de archivo después del ensamblado.
 - Opciones de severidad, filtros o modos de validación configurables.
 - Un formato de serialización distinto de la interfaz TypeScript conceptual.
+
+### Metadata de procedencia de Figma
+
+#### Decisión
+
+Registrar la procedencia de cada token mediante una extensión namespaced y
+autocontenida. La identidad canónica de la fuente usa las claves estables del
+archivo, la colección y la variable de Figma; Git continúa siendo la fuente
+técnica reproducible.
+
+#### Reglas normativas
+
+- La metadata de procedencia DEBE ubicarse en
+  `$extensions["software.solenium.figma"]`.
+- Todo token derivado de una variable de Figma DEBE registrar `fileKey`,
+  `collectionKey` y `variableKey` desde TASK-006.
+- Los tres campos DEBEN ser strings no vacíos.
+- La metadata PUEDE omitirse en tokens que no procedan de una variable de
+  Figma.
+- Los nombres visibles de archivos, colecciones, modos o variables NO DEBEN
+  usarse como identidad canónica.
+- `variableId`, `collectionId`, `modeId`, `subscribedId`, URLs y nombres
+  visibles NO forman parte del contrato mínimo.
+- La metadata DEBE preservarse sin modificar `$type`, `$value`, `$ref` ni la
+  resolución de aliases.
+- La disponibilidad de Figma NO DEBE ser necesaria para validar, compilar o
+  consumir el documento DTCG.
+- Una referencia de procedencia ausente o desactualizada en Figma DEBE tratarse
+  como un problema de sincronización, no como un valor DTCG inválido.
+- TASK-005 define la estructura de la metadata; TASK-006 incorporará los
+  identificadores reales.
+
+#### Interfaz conceptual mínima
+
+```ts
+interface FigmaProvenance {
+  fileKey: string;
+  collectionKey: string;
+  variableKey: string;
+}
+```
+
+#### Ejemplo mínimo
+
+```json
+{
+  "color": {
+    "text": {
+      "primary": {
+        "$type": "color",
+        "$value": "{color.neutral.950}",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "abc123",
+            "collectionKey": "VariableCollectionKey",
+            "variableKey": "VariableKey"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+#### Justificación
+
+Las claves permiten vincular un token con su variable de origen sin depender
+de nombres editables. Mantener la procedencia en cada token simplifica la
+validación y la comparación entre Figma y Git, a cambio de repetir el archivo y
+la colección. La extensión sigue siendo metadata auxiliar: permite detectar
+diferencias y fuentes eliminadas o recreadas, pero no convierte a Figma en una
+dependencia del build ni en la fuente técnica de releases.
+
+#### Aspectos aplazados
+
+- La carga de identificadores reales se realizará en TASK-006.
+- La representación de modos, ramas y colecciones extendidas se definirá cuando
+  exista un caso de sincronización concreto.
+- La procedencia basada en nodos queda fuera del contrato mínimo de variables.
+- La normalización de metadata compartida a nivel de documento se reconsiderará
+  solo si la repetición demuestra ser un problema real.
 
 ## Alcance
 
