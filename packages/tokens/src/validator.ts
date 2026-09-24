@@ -1,4 +1,5 @@
 import {
+  LAYER_RANK,
   SUPPORTED_TYPES,
   type Diagnostic,
   type TokenLayer,
@@ -271,10 +272,7 @@ export function validateInternal(
               "$ref",
             ),
           );
-        } else if (
-          parts.length === valueIndex + 1 &&
-          (!Object.hasOwn(target.node, "$value") || isAlias(target.node.$value))
-        ) {
+        } else if (parts.length === valueIndex + 1 && !Object.hasOwn(target.node, "$value")) {
           add(
             diagnostic(
               "ref.target-not-found",
@@ -358,8 +356,18 @@ export function validateInternal(
         ),
       );
     for (const key of Object.keys(node))
-      if (key.startsWith("$") && !allowed.has(key))
-        add(diagnostic("token.unknown-property", path, `Unknown token property: ${key}`, key));
+      if (key.startsWith("$")) {
+        if (!allowed.has(key))
+          add(diagnostic("token.unknown-property", path, `Unknown token property: ${key}`, key));
+      } else
+        add(
+          diagnostic(
+            "token.unknown-property",
+            path,
+            `Token nodes must not declare non-$ child properties: ${key}`,
+            key,
+          ),
+        );
     const hasValue = Object.hasOwn(node, "$value");
     const hasRef = Object.hasOwn(node, "$ref");
     if (hasValue === hasRef)
@@ -437,7 +445,7 @@ export function validateInternal(
       );
     if (
       node.$type === "number" &&
-      parts.includes("opacity") &&
+      parts[0] === "opacity" &&
       typeof value === "number" &&
       (!Number.isInteger(value) || value < 0 || value > 100)
     )
@@ -460,8 +468,7 @@ export function validateInternal(
         : undefined;
     if (targetPath && info.layer && byPath.has(targetPath)) {
       const targetLayer = byPath.get(targetPath)?.layer;
-      const rank: Record<TokenLayer, number> = { global: 0, brand: 0, semantic: 1, component: 2 };
-      if (targetLayer && rank[targetLayer] > rank[info.layer])
+      if (targetLayer && LAYER_RANK[targetLayer] > LAYER_RANK[info.layer])
         add(
           diagnostic(
             "layer.dependency-inverse",

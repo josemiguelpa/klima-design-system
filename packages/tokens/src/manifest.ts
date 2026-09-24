@@ -1,14 +1,16 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import manifest from "../manifest.json" with { type: "json" };
 import { validateInternal } from "./validator.js";
+import { LAYER_RANK } from "./types.js";
 import type { AssembledTokens, TokenManifest, TokenLayer, ValidationResult } from "./types.js";
 export { manifest };
 
 type Obj = Record<string, unknown>;
-const layerRank: Record<TokenLayer, number> = { global: 0, brand: 0, semantic: 1, component: 2 };
+const layerRank = LAYER_RANK;
 function defaultRoot(): string {
-  return new URL("../", import.meta.url).pathname;
+  return fileURLToPath(new URL("../", import.meta.url));
 }
 function object(value: unknown): value is Obj {
   return typeof value === "object" && value !== null && !Array.isArray(value);

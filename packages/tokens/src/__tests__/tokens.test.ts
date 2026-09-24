@@ -1,11 +1,13 @@
 import { describe, expect, it } from "vitest";
-import valid from "../fixtures/valid.json" with { type: "json" };
-import invalid from "../fixtures/invalid.json" with { type: "json" };
+import valid from "./fixtures/valid.json" with { type: "json" };
+import invalid from "./fixtures/invalid.json" with { type: "json" };
 import {
   assembleTokens,
   manifest,
+  validateInternal,
   validateManifest,
   validateTokenDocument,
+  type TokenLayer,
   type TokenManifest,
 } from "../index.js";
 const validateManifestForTest = validateManifest;
@@ -76,7 +78,7 @@ it("propagates invalid source diagnostics through validateManifest", () => {
   const result = validateManifestForTest({
     version: "2025.10",
     layers: ["global"],
-    sources: [{ layer: "global", path: "src/tokens/global/fixtures/invalid-source.json" }],
+    sources: [{ layer: "global", path: "src/__tests__/fixtures/invalid-source.json" }],
   });
   expect(result.valid).toBe(false);
   expect(result.diagnostics.some((diagnostic) => diagnostic.code === "token.invalid-name")).toBe(
@@ -164,8 +166,8 @@ it("rejects ancestor and descendant token path collisions during assembly", () =
     version: "2025.10",
     layers: ["global"],
     sources: [
-      { layer: "global", path: "src/tokens/global/fixtures/ancestor-token.json" },
-      { layer: "global", path: "src/tokens/global/fixtures/descendant-token.json" },
+      { layer: "global", path: "src/__tests__/fixtures/ancestor-token.json" },
+      { layer: "global", path: "src/__tests__/fixtures/descendant-token.json" },
     ],
   });
   expect(result.valid).toBe(false);
@@ -181,6 +183,36 @@ it("validates font weight names and numeric bounds", () => {
   expect(
     validateTokenDocument({ font: { tooHeavy: { $type: "fontWeight", $value: 2000 } } }).valid,
   ).toBe(false);
+});
+
+it("restricts the integer 0-100 opacity range to the opacity domain root", () => {
+  const outsideOpacityDomain = validateTokenDocument({
+    space: { opacity: { $type: "number", $value: 150 } },
+  });
+  expect(outsideOpacityDomain.valid).toBe(true);
+  const insideOpacityDomain = validateTokenDocument({
+    opacity: { disabled: { $type: "number", $value: 150 } },
+  });
+  expect(insideOpacityDomain.valid).toBe(false);
+  expect(insideOpacityDomain.diagnostics.map((diagnostic) => diagnostic.code)).toContain(
+    "number.opacity-range",
+  );
+});
+
+it("rejects non-$ child properties nested inside a token node", () => {
+  const result = validateTokenDocument({
+    color: {
+      invalid: {
+        $type: "color",
+        $value: { colorSpace: "srgb", components: [0, 0, 0] },
+        nested: { $type: "color", $value: { colorSpace: "srgb", components: [1, 2, 3] } },
+      },
+    },
+  });
+  expect(result.valid).toBe(false);
+  expect(result.diagnostics.map((diagnostic) => diagnostic.code)).toContain(
+    "token.unknown-property",
+  );
 });
 
 it("rejects unsupported dimension units and incomplete shadows", () => {
@@ -244,12 +276,25 @@ it("rejects invalid JSON Pointer escapes", () => {
   expect(result.diagnostics.map((diagnostic) => diagnostic.code)).toContain("ref.invalid-target");
 });
 
-it("rejects a JSON Pointer to an alias token's own $value", () => {
+it("resolves a JSON Pointer to an alias token's own $value", () => {
+  const result = validateTokenDocument({
+    space: {
+      "4": { $type: "dimension", $value: { value: 16, unit: "px" } },
+    },
+    control: {
+      height: { $type: "dimension", $value: "{space.4}" },
+    },
+    button: {
+      height: { $type: "dimension", $ref: "#/control/height/$value" },
+    },
+  });
+  expect(result.valid).toBe(true);
+});
+
+it("rejects a JSON Pointer to a token that does not expose a concrete $value", () => {
   const result = validateTokenDocument({
     color: {
-      base: { $type: "color", $value: { colorSpace: "srgb", components: [0, 0, 0] } },
-      alias: { $type: "color", $value: "{color.base}" },
-      ref: { $type: "color", $ref: "#/color/alias/$value" },
+      base: { $type: "color", $ref: "#/color/missing/$value" },
     },
   });
   expect(result.valid).toBe(false);
@@ -294,6 +339,39 @@ it("validates metadata on groups and tokens", () => {
 
 it("accepts the package manifest and its physical layer layout", () => {
   const result = validateManifest(manifest as TokenManifest);
+  expect(result.valid).toBe(true);
+});
+
+it("rejects a global primitive aliasing a brand primitive", () => {
+  const document = {
+    color: {
+      global: { $type: "color", $value: "{color.brand}" },
+      brand: { $type: "color", $value: { colorSpace: "srgb", components: [0, 0, 0] } },
+    },
+  };
+  const layerByPath = new Map<string, TokenLayer>([
+    ["color.global", "global"],
+    ["color.brand", "brand"],
+  ]);
+  const result = validateInternal(document, layerByPath);
+  expect(result.valid).toBe(false);
+  expect(result.diagnostics.map((diagnostic) => diagnostic.code)).toContain(
+    "layer.dependency-inverse",
+  );
+});
+
+it("accepts a brand primitive aliasing a global primitive", () => {
+  const document = {
+    color: {
+      global: { $type: "color", $value: { colorSpace: "srgb", components: [0, 0, 0] } },
+      brand: { $type: "color", $value: "{color.global}" },
+    },
+  };
+  const layerByPath = new Map<string, TokenLayer>([
+    ["color.global", "global"],
+    ["color.brand", "brand"],
+  ]);
+  const result = validateInternal(document, layerByPath);
   expect(result.valid).toBe(true);
 });
 
