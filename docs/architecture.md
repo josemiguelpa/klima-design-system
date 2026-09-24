@@ -46,16 +46,16 @@ No debe existir dependencia desde tokens hacia frameworks o componentes.
 
 ## Responsabilidades
 
-| Paquete                            | Responsabilidad                                     |
-| ---------------------------------- | --------------------------------------------------- |
-| `@klima-ds/tokens`                 | Contrato DTCG, CSS base y valores TypeScript        |
-| `@klima-ds/themes`                 | Implementaciones Solé y futuras marcas, light/dark  |
-| `@klima-ds/theme-runtime`          | Validar y aplicar white-label en runtime            |
-| `@klima-ds/shadcn`                 | Traducir tokens Klima a variables shadcn            |
-| `@klima-ds/icons-react`            | Componentes de icono React puros y tree-shakeables  |
-| `@klima-ds/icons-vue`              | Componentes Vue sin dependencia de React            |
-| `@klima-ds/icons-astro`            | Componentes Astro sin dependencia de React/Vue      |
-| `@klima-ds/react`                  | Componentes React estilizados con tokens semánticos |
+| Paquete                           | Responsabilidad                                      |
+| --------------------------------- | ---------------------------------------------------- |
+| `@klima-ds/tokens`                | Contrato DTCG, CSS base y valores TypeScript         |
+| `@klima-ds/themes`                | Implementaciones Solé y futuras marcas, light/dark   |
+| `@klima-ds/theme-runtime`         | Validar y aplicar white-label en runtime             |
+| `@klima-ds/shadcn`                | Traducir tokens Klima a variables shadcn             |
+| `@klima-ds/icons-react`           | Componentes de icono React puros y tree-shakeables   |
+| `@klima-ds/icons-vue`             | Componentes Vue sin dependencia de React             |
+| `@klima-ds/icons-astro`           | Componentes Astro sin dependencia de React/Vue       |
+| `@klima-ds/react`                 | Componentes React estilizados con tokens semánticos  |
 | Guía de migración (documentación) | Límites, pasos y equivalencias revisadas manualmente |
 
 ## API de temas
