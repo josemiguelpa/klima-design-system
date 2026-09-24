@@ -97,9 +97,13 @@ el modelo general de tokens cuando se cierren todos los puntos pendientes.
 - Rechazar como error una sintaxis inválida, un destino inexistente, un ciclo,
   una incompatibilidad de tipo o una dependencia inversa entre capas.
 - Una referencia puede apuntar a la misma capa o a una capa más fundacional,
-  nunca a una más específica. Por ejemplo, un token semántico puede depender de
-  una primitiva y un token de componente puede depender de un semántico, pero
-  una primitiva no puede depender de un token semántico o de componente.
+  nunca a una más específica. El orden de capas, de más fundacional a más
+  específica, es: global, marca, semántico, componente. Por ejemplo, un token
+  semántico puede depender de una primitiva y un token de componente puede
+  depender de un semántico, pero una primitiva no puede depender de un token
+  semántico o de componente. Dentro de las primitivas, una primitiva global no
+  puede depender de una primitiva de marca, mientras que una primitiva de
+  marca sí puede depender de una primitiva global.
 - Resolver únicamente el valor. `$description`, `$deprecated`, `$extensions` y
   cualquier otra metadata pertenecen al token que las declara y no se heredan.
 - Preservar la referencia en los archivos fuente. La resolución no reemplaza el
