@@ -2,9 +2,570 @@
   "brand": {
     "sole": {
       "green": {
+        "50": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.9843, 0.9922, 0.9451],
+            "alpha": 1,
+            "hex": "#FBFDF1"
+          },
+          "$description": "Figma variable primitivas/Solé/green/50.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "5dce00478de3602868b43c89dcc17825c2174042"
+            }
+          }
+        },
+        "100": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.9686, 0.9922, 0.8667],
+            "alpha": 1,
+            "hex": "#F7FDDD"
+          },
+          "$description": "Figma variable primitivas/Solé/green/100.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "23e4a0cef1f5625a2158349cd25d3dc3fc5efe5a"
+            }
+          }
+        },
+        "200": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.9333, 1, 0.6392],
+            "alpha": 1,
+            "hex": "#EEFFA3"
+          },
+          "$description": "Figma variable primitivas/Solé/green/200.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "f316a2f19fd87c57b6f174b7bc0df73164c3654d"
+            }
+          }
+        },
+        "300": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.9137, 1, 0.5216],
+            "alpha": 1,
+            "hex": "#E9FF85"
+          },
+          "$description": "Figma variable primitivas/Solé/green/300.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "da17e02b190aac35bce175ddcc2ab63c51872ee8"
+            }
+          }
+        },
+        "400": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.8863, 1, 0.3961],
+            "alpha": 1,
+            "hex": "#E2FF65"
+          },
+          "$description": "Figma variable primitivas/Solé/green/400.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "6b3b34eee07b60cb12199a606850b659d84b1fa8"
+            }
+          }
+        },
+        "500": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.8627, 1, 0.2588],
+            "alpha": 1,
+            "hex": "#DCFF42"
+          },
+          "$description": "Figma variable primitivas/Solé/green/500.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "413a040dab99088ee27ed4ef10a6a65eb43ad8e4"
+            }
+          }
+        },
         "600": {
           "$type": "color",
-          "$value": { "colorSpace": "srgb", "components": [0.1, 0.6, 0.3], "alpha": 1 }
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.8353, 1, 0.102],
+            "alpha": 1,
+            "hex": "#D5FF1A"
+          },
+          "$description": "Figma variable primitivas/Solé/green/600.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "7fa93355fc0c61f16754efec34aaddb6aa24dc85"
+            }
+          }
+        },
+        "700": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.6784, 0.8667, 0.0196],
+            "alpha": 1,
+            "hex": "#ADDD05"
+          },
+          "$description": "Figma variable primitivas/Solé/green/700.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "ab4b2d0753d9fc6a32cbd999597e932dff0c6522"
+            }
+          }
+        },
+        "800": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.5255, 0.6941, 0],
+            "alpha": 1,
+            "hex": "#86B100"
+          },
+          "$description": "Figma variable primitivas/Solé/green/800.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "7eb350408d1245acd06f1001195e1a06cfb97bdd"
+            }
+          }
+        },
+        "900": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.3961, 0.5255, 0.0196],
+            "alpha": 1,
+            "hex": "#658605"
+          },
+          "$description": "Figma variable primitivas/Solé/green/900.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "096f67ce18e7ba9d53f7f25214d50b9067fc81f5"
+            }
+          }
+        },
+        "950": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.1373, 0.1961, 0.0039],
+            "alpha": 1,
+            "hex": "#233201"
+          },
+          "$description": "Figma variable primitivas/Solé/green/950.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "618bbd2eb297638766effcb4163dd0dac91a67e0"
+            }
+          }
+        }
+      },
+      "blue": {
+        "50": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.9529, 0.9725, 0.9882],
+            "alpha": 1,
+            "hex": "#F3F8FC"
+          },
+          "$description": "Figma variable primitivas/Solé/blue/50.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "3e5135a212fee5888496139a7dd9a1b008a1910a"
+            }
+          }
+        },
+        "100": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.902, 0.9412, 0.9725],
+            "alpha": 1,
+            "hex": "#E6F0F8"
+          },
+          "$description": "Figma variable primitivas/Solé/blue/100.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "52d057b3ca01eaa05fc87b19b06c9e7cb5f1583b"
+            }
+          }
+        },
+        "200": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.6706, 0.8392, 0.9294],
+            "alpha": 1,
+            "hex": "#ABD6ED"
+          },
+          "$description": "Figma variable primitivas/Solé/blue/200.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "cc970cba61984ec677a390fc371eb77f4da1f95f"
+            }
+          }
+        },
+        "300": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.5961, 0.7961, 0.9059],
+            "alpha": 1,
+            "hex": "#98CBE7"
+          },
+          "$description": "Figma variable primitivas/Solé/blue/300.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "11b1483ae2208ebd271196bd0a0df90e14bc02b1"
+            }
+          }
+        },
+        "400": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.549, 0.7647, 0.8824],
+            "alpha": 1,
+            "hex": "#8CC3E1"
+          },
+          "$description": "Figma variable primitivas/Solé/blue/400.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "e826662184c68952c7e4283a352b39dc219f9510"
+            }
+          }
+        },
+        "500": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.4078, 0.6824, 0.8314],
+            "alpha": 1,
+            "hex": "#68AED4"
+          },
+          "$description": "Figma variable primitivas/Solé/blue/500.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "8442d61d94a7875fbbb283a60f4c3b6bdd479dfa"
+            }
+          }
+        },
+        "600": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.2353, 0.5804, 0.7647],
+            "alpha": 1,
+            "hex": "#3C94C3"
+          },
+          "$description": "Figma variable primitivas/Solé/blue/600.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "6595624b90d858304f073c4af404e9fc4edf24b1"
+            }
+          }
+        },
+        "700": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.1882, 0.4353, 0.5686],
+            "alpha": 1,
+            "hex": "#306F91"
+          },
+          "$description": "Figma variable primitivas/Solé/blue/700.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "ded544f1be1fec2681e419ce790c675374b967ba"
+            }
+          }
+        },
+        "800": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.1882, 0.4353, 0.5686],
+            "alpha": 1,
+            "hex": "#306F91"
+          },
+          "$description": "Figma variable primitivas/Solé/blue/800.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "fdce9779781af0b4b07e88406297f4421c487ebc"
+            }
+          }
+        },
+        "900": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.1373, 0.298, 0.3804],
+            "alpha": 1,
+            "hex": "#234C61"
+          },
+          "$description": "Figma variable primitivas/Solé/blue/900.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "7685fd5df1ab9ed340d7bdfbf065099209df126d"
+            }
+          }
+        },
+        "950": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.098, 0.2039, 0.2627],
+            "alpha": 1,
+            "hex": "#193443"
+          },
+          "$description": "Figma variable primitivas/Solé/blue/950.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "cc5f8d4743710bfc55f869496e1c9829c97aefca"
+            }
+          }
+        }
+      },
+      "indigo": {
+        "50": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.898, 0.9216, 0.9725],
+            "alpha": 1,
+            "hex": "#E5EBF8"
+          },
+          "$description": "Figma variable primitivas/Solé/indigo/50.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "044dfeae491e8906ba0f379cdac75cd140d9a952"
+            }
+          }
+        },
+        "100": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.5569, 0.6588, 0.8431],
+            "alpha": 1,
+            "hex": "#8EA8D7"
+          },
+          "$description": "Figma variable primitivas/Solé/indigo/100.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "fd3fcbb69a4aa8c81134f890c13417bedfdb087f"
+            }
+          }
+        },
+        "200": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.2157, 0.3569, 0.6039],
+            "alpha": 1,
+            "hex": "#375B9A"
+          },
+          "$description": "Figma variable primitivas/Solé/indigo/200.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "5b6cd1bd7459071ccbec9172bcfd46371bf5d05b"
+            }
+          }
+        },
+        "300": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.1137, 0.2118, 0.3882],
+            "alpha": 1,
+            "hex": "#1D3663"
+          },
+          "$description": "Figma variable primitivas/Solé/indigo/300.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "96c9b807f9e910e2d82a69ea2c1dc4fae22ed1cb"
+            }
+          }
+        },
+        "400": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.0824, 0.149, 0.2667],
+            "alpha": 1,
+            "hex": "#152644"
+          },
+          "$description": "Figma variable primitivas/Solé/indigo/400.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "f5629a8b7ff7a5c09696ed2a228d4c40ec084fef"
+            }
+          }
+        },
+        "500": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.0745, 0.1333, 0.2392],
+            "alpha": 1,
+            "hex": "#13223D"
+          },
+          "$description": "Figma variable primitivas/Solé/indigo/500.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "c30b48a47583e8f5eff8eba892e05d9512824299"
+            }
+          }
+        },
+        "600": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.0627, 0.1137, 0.2],
+            "alpha": 1,
+            "hex": "#101D33"
+          },
+          "$description": "Figma variable primitivas/Solé/indigo/600.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "eda151118320b176dd319ca5123a6e790aceb839"
+            }
+          }
+        },
+        "700": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.0745, 0.1333, 0.2392],
+            "alpha": 1,
+            "hex": "#13223D"
+          },
+          "$description": "Figma variable primitivas/Solé/indigo/700.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "2ede218fbb86ef100e60ae1da5b1616458adc425"
+            }
+          }
+        },
+        "800": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.0627, 0.1137, 0.2],
+            "alpha": 1,
+            "hex": "#101D33"
+          },
+          "$description": "Figma variable primitivas/Solé/indigo/800.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "6bfe6af599f260fd44f517762ba7b1a5c04cee5c"
+            }
+          }
+        },
+        "900": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.051, 0.0902, 0.1608],
+            "alpha": 1,
+            "hex": "#0D1729"
+          },
+          "$description": "Figma variable primitivas/Solé/indigo/900.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "f6390514b33f9dbc46e15a910242ec649b51c2b0"
+            }
+          }
+        },
+        "950": {
+          "$type": "color",
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.0275, 0.051, 0.0941],
+            "alpha": 1,
+            "hex": "#070D18"
+          },
+          "$description": "Figma variable primitivas/Solé/indigo/950.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+              "collectionKey": "7dc05e4156409c151dd9b1ff143283700d173350",
+              "variableKey": "86b29a3569a4e273ddeb8743b98e7a40b7a10e6c"
+            }
+          }
         }
       }
     }
