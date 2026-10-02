@@ -32,7 +32,7 @@ Fuente: archivo de Figma `Sistema de diseño Solé` (`zeWPEzMPcSIT91DT5awWiB`), 
 - `brand.sole.{green,blue,indigo}.{50…950}` en `src/tokens/brands/sole/color.json`, con procedencia Figma por token.
 - El paso 400 es el color base de la marca, según una anotación de diseño en Figma: green `#E2FF65`, blue `#8CC3E1`, indigo `#152644`.
 - Por decisión del propietario, grises, colores de estado y marcas del Klimaverso no se duplican: Solé reutiliza los tokens importados desde el archivo de Klima (TASK-016). La comparación de 125 variables entre ambos archivos dio 124 coincidencias; la única diferencia es QuoiaGo, que conserva el valor del archivo de Klima.
-- La familia tipográfica (Montserrat; pesos 400, 500 y 600) queda pendiente.
+- `brand.sole.font.family.base` = `["Montserrat", "system-ui", "sans-serif"]` en `src/tokens/brands/sole/font.json`, desde la variable `Typography/type/Heading`. Los 15 estilos de texto de Solé usan los mismos tamaños y pesos que Klima (400, 500 y 600, más itálica 400), así que reutilizan `font.size.*` y `font.weight.*` globales; Solé no usa el peso 300.
 - Verificación: `src/__tests__/sole-primitives.test.ts` y cruce de los 33 valores contra los swatches del lienzo, sin diferencias.
 
 ## Hallazgos en Figma (sin corregir)

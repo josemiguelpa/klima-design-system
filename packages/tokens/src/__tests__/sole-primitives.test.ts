@@ -22,21 +22,34 @@ function leaves(node: Obj, prefix = ""): Leaf[] {
 
 const { document, validation } = assembleTokens();
 const sole = leaves(document).filter(({ path }) => path.startsWith("brand.sole."));
+const colors = sole.filter(({ node }) => node.$type === "color");
 const hexOf = (node: Obj) => (node.$value as { hex: string }).hex;
+const tokenPaths = new Set(leaves(document).map(({ path }) => path));
 
 describe("Solé primitives", () => {
   it("assemble without diagnostics", () => {
     expect(validation.diagnostics).toEqual([]);
   });
 
-  it("expose exactly the green, blue and indigo 50-950 scales", () => {
+  it("expose exactly the green, blue and indigo 50-950 scales and the font family", () => {
     expect(sole.map(({ path }) => path).sort()).toEqual(
-      SCALES.flatMap((scale) => STEPS.map((step) => `brand.sole.${scale}.${step}`)).sort(),
+      [
+        ...SCALES.flatMap((scale) => STEPS.map((step) => `brand.sole.${scale}.${step}`)),
+        "brand.sole.font.family.base",
+      ].sort(),
     );
   });
 
+  it("reuse global font sizes and weights required by the Solé text styles", () => {
+    // Solé text styles in Figma use sizes 10-64 and weights 400, 500 and 600.
+    for (const size of ["10", "12", "14", "16", "20", "28", "32", "48", "64"])
+      expect(tokenPaths.has(`font.size.${size}`), size).toBe(true);
+    for (const weight of ["400", "500", "600"])
+      expect(tokenPaths.has(`font.weight.${weight}`), weight).toBe(true);
+  });
+
   it("keep sRGB components consistent with the declared hex", () => {
-    for (const { path, node } of sole) {
+    for (const { path, node } of colors) {
       const value = node.$value as { components: number[]; hex: string; alpha: number };
       const expected = [1, 3, 5].map(
         (i) => Math.round((parseInt(value.hex.slice(i, i + 2), 16) / 255) * 10000) / 10000,
@@ -56,7 +69,7 @@ describe("Solé primitives", () => {
 
   it("only repeat hex values that are documented in Figma findings", () => {
     const byHex = new Map<string, string[]>();
-    for (const { path, node } of sole)
+    for (const { path, node } of colors)
       byHex.set(hexOf(node), [...(byHex.get(hexOf(node)) ?? []), path]);
     const repeated = [...byHex.values()].filter((paths) => paths.length > 1);
     expect(repeated).toEqual([
@@ -67,6 +80,12 @@ describe("Solé primitives", () => {
   });
 
   it("match the approved snapshot", () => {
-    expect(Object.fromEntries(sole.map(({ path, node }) => [path, hexOf(node)]))).toMatchSnapshot();
+    const flat = Object.fromEntries(
+      sole.map(({ path, node }) => [
+        path,
+        node.$type === "color" ? hexOf(node) : (node.$value as unknown),
+      ]),
+    );
+    expect(flat).toMatchSnapshot();
   });
 });

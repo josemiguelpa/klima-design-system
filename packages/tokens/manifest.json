@@ -12,6 +12,7 @@
     { "layer": "brand", "path": "src/tokens/brands/inpel/color.json" },
     { "layer": "brand", "path": "src/tokens/brands/suno/color.json" },
     { "layer": "brand", "path": "src/tokens/brands/sole/color.json" },
+    { "layer": "brand", "path": "src/tokens/brands/sole/font.json" },
     { "layer": "semantic", "path": "src/tokens/semantic/color.json" },
     { "layer": "component", "path": "src/tokens/components/button.json" }
   ]

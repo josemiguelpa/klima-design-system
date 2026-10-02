@@ -31,10 +31,10 @@ Se evaluaron tres alternativas:
 
 ## Fuentes requeridas por marca
 
-| Marca | Familia        | Pesos              | Estilos             | Fuente del dato                                  |
-| ----- | -------------- | ------------------ | ------------------- | ------------------------------------------------ |
-| Klima | Be Vietnam Pro | 300, 400, 500, 600 | normal, itálica 400 | Figma `Sistema de diseño KLIMA`, nodo `251:2478` |
-| Solé  | Montserrat     | Por confirmar      | Por confirmar       | Pendiente                                        |
+| Marca | Familia        | Pesos              | Estilos             | Fuente del dato                                          |
+| ----- | -------------- | ------------------ | ------------------- | -------------------------------------------------------- |
+| Klima | Be Vietnam Pro | 300, 400, 500, 600 | normal, itálica 400 | Figma `Sistema de diseño KLIMA`, nodo `251:2478`         |
+| Solé  | Montserrat     | 400, 500, 600      | normal, itálica 400 | Figma `Sistema de diseño Solé`, estilos de texto locales |
 
 ## Ejemplos de carga en una aplicación
 

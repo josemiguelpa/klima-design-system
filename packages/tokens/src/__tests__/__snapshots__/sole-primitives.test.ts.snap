@@ -13,6 +13,11 @@ exports[`Solé primitives > match the approved snapshot 1`] = `
   "brand.sole.blue.800": "#306F91",
   "brand.sole.blue.900": "#234C61",
   "brand.sole.blue.950": "#193443",
+  "brand.sole.font.family.base": [
+    "Montserrat",
+    "system-ui",
+    "sans-serif",
+  ],
   "brand.sole.green.100": "#F7FDDD",
   "brand.sole.green.200": "#EEFFA3",
   "brand.sole.green.300": "#E9FF85",

@@ -1,0 +1,22 @@
+{
+  "brand": {
+    "sole": {
+      "font": {
+        "family": {
+          "base": {
+            "$type": "fontFamily",
+            "$value": ["Montserrat", "system-ui", "sans-serif"],
+            "$description": "Figma variable Typography/type/Heading (used for headings and body text). Fallbacks per ADR-006.",
+            "$extensions": {
+              "software.solenium.figma": {
+                "fileKey": "zeWPEzMPcSIT91DT5awWiB",
+                "collectionKey": "b54dc1d2b48c00c8f85baa981ee92ca6a1e21efc",
+                "variableKey": "db4a12249eca7bd891cc19d41911a234ec4f6783"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
