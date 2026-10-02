@@ -29,6 +29,14 @@ const colorSpaces = new Set([
   "hsv",
 ]);
 const dimensionUnits = new Set(["px", "rem"]);
+// ADR-005: required properties of a typography value and the token type each one must resolve to.
+const typographyProperties: Record<string, TokenType> = {
+  fontFamily: "fontFamily",
+  fontSize: "dimension",
+  fontWeight: "fontWeight",
+  letterSpacing: "dimension",
+  lineHeight: "number",
+};
 const fontWeightNames = new Set([
   "thin",
   "hairline",
@@ -151,6 +159,15 @@ function typeCompatible(type: TokenType, value: unknown): boolean {
       (candidate.inset === undefined || typeof candidate.inset === "boolean");
     return Array.isArray(value) ? value.length > 0 && value.every(validShadow) : validShadow(value);
   }
+  if (type === "typography")
+    return (
+      isObject(value) &&
+      Object.keys(value).every((key) => Object.hasOwn(typographyProperties, key)) &&
+      Object.entries(typographyProperties).every(
+        ([key, propertyType]) =>
+          Object.hasOwn(value, key) && typeCompatible(propertyType, value[key]),
+      )
+    );
   return false;
 }
 export function validateTokenDocument(document: unknown): ValidationResult {
@@ -171,6 +188,63 @@ export function validateInternal(
   const resolved = new Map<string, unknown>();
   const resolving = new Set<string>();
   const add = (d: Diagnostic) => diagnostics.push(d);
+  // ADR-005: each typography property may alias a whole token of the matching type.
+  // Returns undefined when a property reference is invalid, so no type mismatch is reported twice.
+  const resolveTypography = (info: TokenInfo, value: RecordNode): RecordNode | undefined => {
+    const output: RecordNode = {};
+    let failed = false;
+    for (const [key, property] of Object.entries(value)) {
+      const where = `$value.${key}`;
+      if (isAlias(property)) {
+        const target = byPath.get(property.slice(1, -1));
+        const expected = typographyProperties[key];
+        if (!target) {
+          add(
+            diagnostic(
+              "alias.target-not-found",
+              info.path,
+              `Alias target does not exist: ${property}`,
+              where,
+            ),
+          );
+          failed = true;
+        } else if (!expected || target.node.$type !== expected) {
+          add(
+            diagnostic(
+              "typography.property-type-mismatch",
+              info.path,
+              `Typography property ${key} must reference a ${expected ?? "known"} token`,
+              where,
+            ),
+          );
+          failed = true;
+        } else {
+          if (info.layer && target.layer && LAYER_RANK[target.layer] > LAYER_RANK[info.layer])
+            add(
+              diagnostic(
+                "layer.dependency-inverse",
+                info.path,
+                "A token cannot depend on a more specific layer",
+                where,
+              ),
+            );
+          output[key] = resolve(target);
+          if (output[key] === undefined) failed = true;
+        }
+      } else if (typeof property === "string" && property.includes("{")) {
+        add(
+          diagnostic(
+            "alias.invalid-syntax",
+            info.path,
+            "Aliases must use the complete {token.path} syntax",
+            where,
+          ),
+        );
+        failed = true;
+      } else output[key] = property;
+    }
+    return failed ? undefined : output;
+  };
   const inspectMetadata = (node: RecordNode, path: string): void => {
     if (Object.hasOwn(node, "$description") && typeof node.$description !== "string")
       add(
@@ -318,6 +392,8 @@ export function validateInternal(
             "$value",
           ),
         );
+      else if (info.node.$type === "typography" && isObject(value))
+        value = resolveTypography(info, value);
       const containsEmbeddedReference = (candidate: unknown): boolean => {
         if (typeof candidate === "string") return candidate.includes("{");
         if (Array.isArray(candidate)) return candidate.some(containsEmbeddedReference);

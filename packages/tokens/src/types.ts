@@ -5,6 +5,7 @@ export const SUPPORTED_TYPES = [
   "fontWeight",
   "number",
   "shadow",
+  "typography",
 ] as const;
 export type TokenType = (typeof SUPPORTED_TYPES)[number];
 export type DiagnosticSeverity = "error" | "warning";
