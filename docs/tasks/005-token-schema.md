@@ -29,6 +29,8 @@ el modelo general de tokens cuando se cierren todos los puntos pendientes.
 - Dejar fuera por ahora `duration`, `cubicBezier`, `transition`, `strokeStyle`,
   `border`, `gradient` y `typography`. Podrán añadirse de forma compatible cuando
   exista un caso de uso concreto.
+  - **Modificado por [ADR-005](../decisions/005-typography-tokens.md):** se
+    admite `typography`.
 - La futura generación CSS será responsable de convertir una opacidad como `40`
   a la representación requerida por la plataforma, por ejemplo `0.4`.
 
@@ -138,6 +140,10 @@ JSON Pointer sin introducir resolución recursiva dentro de valores compuestos.
 
 Las referencias incrustadas dentro de `shadow` u otros valores compuestos quedan
 aplazadas hasta que exista un caso de uso real.
+
+**Excepción por [ADR-005](../decisions/005-typography-tokens.md):** las
+propiedades de un valor `typography` pueden ser aliases `"{ruta.del.token}"` a
+tokens completos del tipo correspondiente.
 
 ### Gramática de nombres
 

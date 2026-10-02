@@ -1,0 +1,40 @@
+{
+  "brand": {
+    "inpel": {
+      "cherry": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9765, 0.1176, 0.3176],
+          "alpha": 1,
+          "hex": "#F91E51"
+        },
+        "$description": "Figma variable primitivas/Klimaverso/Inpel/cherry.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "57c51984dcd74f79aef2472b01cee981a2d078f9",
+            "variableKey": "49fd2ea7ab7eef9ceaef7d471b7b385bd3b7744a"
+          }
+        }
+      },
+      "blue": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0549, 0.1137, 0.2353],
+          "alpha": 1,
+          "hex": "#0E1D3C"
+        },
+        "$description": "Figma variable primitivas/Klimaverso/Inpel/blue.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "57c51984dcd74f79aef2472b01cee981a2d078f9",
+            "variableKey": "11bd5d2f4de8fbb9357e4db4096a9da7187335f7"
+          }
+        }
+      }
+    }
+  }
+}

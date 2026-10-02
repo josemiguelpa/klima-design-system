@@ -3,6 +3,14 @@
   "layers": ["global", "brand", "semantic", "component"],
   "sources": [
     { "layer": "global", "path": "src/tokens/global/color.json" },
+    { "layer": "global", "path": "src/tokens/global/font.json" },
+    { "layer": "brand", "path": "src/tokens/brands/klima/color.json" },
+    { "layer": "brand", "path": "src/tokens/brands/klima/font.json" },
+    { "layer": "brand", "path": "src/tokens/brands/unergy/color.json" },
+    { "layer": "brand", "path": "src/tokens/brands/quoiago/color.json" },
+    { "layer": "brand", "path": "src/tokens/brands/zentrack/color.json" },
+    { "layer": "brand", "path": "src/tokens/brands/inpel/color.json" },
+    { "layer": "brand", "path": "src/tokens/brands/suno/color.json" },
     { "layer": "brand", "path": "src/tokens/brands/sole/color.json" },
     { "layer": "semantic", "path": "src/tokens/semantic/color.json" },
     { "layer": "component", "path": "src/tokens/components/button.json" }

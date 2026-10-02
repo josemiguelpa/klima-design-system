@@ -1,0 +1,40 @@
+{
+  "brand": {
+    "zentrack": {
+      "orange": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9922, 0.6118, 0.0627],
+          "alpha": 1,
+          "hex": "#FD9C10"
+        },
+        "$description": "Figma variable primitivas/Klimaverso/Zentrack/orange.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "57c51984dcd74f79aef2472b01cee981a2d078f9",
+            "variableKey": "0daf585caf9f0d1bec5f9c0c362acaaeb24d60bc"
+          }
+        }
+      },
+      "gray": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.4745, 0.4745, 0.4745],
+          "alpha": 1,
+          "hex": "#797979"
+        },
+        "$description": "Figma variable primitivas/Klimaverso/Zentrack/gray.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "57c51984dcd74f79aef2472b01cee981a2d078f9",
+            "variableKey": "5ac9da000d12a652954b68fc7644b9d91d2d63f3"
+          }
+        }
+      }
+    }
+  }
+}

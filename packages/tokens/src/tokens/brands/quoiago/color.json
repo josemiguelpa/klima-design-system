@@ -1,0 +1,57 @@
+{
+  "brand": {
+    "quoiago": {
+      "lime": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.7412, 1, 0.1412],
+          "alpha": 1,
+          "hex": "#BDFF24"
+        },
+        "$description": "Figma variable primitivas/Klimaverso/QuoiaGo/lime.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "57c51984dcd74f79aef2472b01cee981a2d078f9",
+            "variableKey": "25875601c4e0de13ad790f87ba45bb6f88812efc"
+          }
+        }
+      },
+      "electric-blue": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.2157, 0.1647, 0.5216],
+          "alpha": 1,
+          "hex": "#372A85"
+        },
+        "$description": "Figma variable primitivas/Klimaverso/QuoiaGo/electric blue.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "57c51984dcd74f79aef2472b01cee981a2d078f9",
+            "variableKey": "14abfea68799f3b3d084cd29f7f5b45b829d8ab2"
+          }
+        }
+      },
+      "desert-storm": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9725, 0.9725, 0.9725],
+          "alpha": 1,
+          "hex": "#F8F8F8"
+        },
+        "$description": "Figma variable primitivas/Klimaverso/QuoiaGo/Desert storm.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "57c51984dcd74f79aef2472b01cee981a2d078f9",
+            "variableKey": "d0009946b0b9ab0f976eb618d64969090e733460"
+          }
+        }
+      }
+    }
+  }
+}

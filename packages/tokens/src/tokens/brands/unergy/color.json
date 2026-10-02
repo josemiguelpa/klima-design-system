@@ -1,0 +1,74 @@
+{
+  "brand": {
+    "unergy": {
+      "morado": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.5686, 0.3569, 0.8471],
+          "alpha": 1,
+          "hex": "#915BD8"
+        },
+        "$description": "Figma variable primitivas/Klimaverso/Unergy/Morado.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "57c51984dcd74f79aef2472b01cee981a2d078f9",
+            "variableKey": "f62d405ba524371bea1b45f4f0b8cd2ef43e182b"
+          }
+        }
+      },
+      "avena": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9922, 0.9804, 0.9686],
+          "alpha": 1,
+          "hex": "#FDFAF7"
+        },
+        "$description": "Figma variable primitivas/Klimaverso/Unergy/Avena.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "57c51984dcd74f79aef2472b01cee981a2d078f9",
+            "variableKey": "727794abd407c59f1c18065c396671b4f4e4309e"
+          }
+        }
+      },
+      "purpura-profundo": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.1725, 0.1255, 0.2235],
+          "alpha": 1,
+          "hex": "#2C2039"
+        },
+        "$description": "Figma variable primitivas/Klimaverso/Unergy/Purpura profundo.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "57c51984dcd74f79aef2472b01cee981a2d078f9",
+            "variableKey": "8707d3c4b905cd61d342f912a8138ec2b9f82952"
+          }
+        }
+      },
+      "amarillo": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9647, 1, 0.4471],
+          "alpha": 1,
+          "hex": "#F6FF72"
+        },
+        "$description": "Figma variable primitivas/Klimaverso/Unergy/Amarillo.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "57c51984dcd74f79aef2472b01cee981a2d078f9",
+            "variableKey": "929dd3131d7eb58472fe6f04bc00c5086778263d"
+          }
+        }
+      }
+    }
+  }
+}

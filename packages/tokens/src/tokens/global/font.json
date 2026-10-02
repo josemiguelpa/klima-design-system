@@ -1,0 +1,221 @@
+{
+  "font": {
+    "size": {
+      "10": {
+        "$type": "dimension",
+        "$value": {
+          "value": 10,
+          "unit": "px"
+        },
+        "$description": "Figma variable Typography/size/10.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "864bde3def83ff980abcc44931cbf246b7122c67",
+            "variableKey": "573b4ace4968864ec4881588a79dece170363eb6"
+          }
+        }
+      },
+      "12": {
+        "$type": "dimension",
+        "$value": {
+          "value": 12,
+          "unit": "px"
+        },
+        "$description": "Figma variable Typography/size/12.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "864bde3def83ff980abcc44931cbf246b7122c67",
+            "variableKey": "b2ea34d89703fd49775fe0f7bb825ceba3500ea7"
+          }
+        }
+      },
+      "14": {
+        "$type": "dimension",
+        "$value": {
+          "value": 14,
+          "unit": "px"
+        },
+        "$description": "Figma variable Typography/size/14.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "864bde3def83ff980abcc44931cbf246b7122c67",
+            "variableKey": "b45480df5e6fd13647cfcb6311672942377f6dfa"
+          }
+        }
+      },
+      "16": {
+        "$type": "dimension",
+        "$value": {
+          "value": 16,
+          "unit": "px"
+        },
+        "$description": "Figma variable Typography/size/16.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "864bde3def83ff980abcc44931cbf246b7122c67",
+            "variableKey": "7f5c707612eb04789384742ad37e43fb255bde5e"
+          }
+        }
+      },
+      "18": {
+        "$type": "dimension",
+        "$value": {
+          "value": 18,
+          "unit": "px"
+        },
+        "$description": "Figma variable Typography/size/18.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "864bde3def83ff980abcc44931cbf246b7122c67",
+            "variableKey": "f194ca234f3723579fee4f2cca3e09735912e790"
+          }
+        }
+      },
+      "20": {
+        "$type": "dimension",
+        "$value": {
+          "value": 20,
+          "unit": "px"
+        },
+        "$description": "Figma variable Typography/size/20.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "864bde3def83ff980abcc44931cbf246b7122c67",
+            "variableKey": "12b41d0b56bac59810cbbb9e391da360cf58cebf"
+          }
+        }
+      },
+      "24": {
+        "$type": "dimension",
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        },
+        "$description": "Figma variable Typography/size/24.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "864bde3def83ff980abcc44931cbf246b7122c67",
+            "variableKey": "c96c8be64a1290921c4f689861e3069b7ba57bc6"
+          }
+        }
+      },
+      "28": {
+        "$type": "dimension",
+        "$value": {
+          "value": 28,
+          "unit": "px"
+        },
+        "$description": "Figma variable Typography/size/28.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "864bde3def83ff980abcc44931cbf246b7122c67",
+            "variableKey": "75442965832bfe74fe0314069dc2827bb5b30385"
+          }
+        }
+      },
+      "32": {
+        "$type": "dimension",
+        "$value": {
+          "value": 32,
+          "unit": "px"
+        },
+        "$description": "Figma variable Typography/size/32.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "864bde3def83ff980abcc44931cbf246b7122c67",
+            "variableKey": "f86e596318964a8b3fac4f2e4229443ebbea2e52"
+          }
+        }
+      },
+      "48": {
+        "$type": "dimension",
+        "$value": {
+          "value": 48,
+          "unit": "px"
+        },
+        "$description": "Figma variable Typography/size/48.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "864bde3def83ff980abcc44931cbf246b7122c67",
+            "variableKey": "93023fe09cb492481922df7a2a660913826193f0"
+          }
+        }
+      },
+      "64": {
+        "$type": "dimension",
+        "$value": {
+          "value": 64,
+          "unit": "px"
+        },
+        "$description": "Figma variable Typography/size/64.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "864bde3def83ff980abcc44931cbf246b7122c67",
+            "variableKey": "0df040b32f97504406da7a6ae9ed928f9ebf5424"
+          }
+        }
+      }
+    },
+    "weight": {
+      "300": {
+        "$type": "fontWeight",
+        "$value": 300,
+        "$description": "Figma variable Typography/weight/Light.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "864bde3def83ff980abcc44931cbf246b7122c67",
+            "variableKey": "6c6dd99268312a06d096bfadffcd23a1a8e42f13"
+          }
+        }
+      },
+      "400": {
+        "$type": "fontWeight",
+        "$value": 400,
+        "$description": "Figma variable Typography/weight/Regular.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "864bde3def83ff980abcc44931cbf246b7122c67",
+            "variableKey": "83a6e12baf30c4c2bdb6398d753dbf0ebbbcc9cd"
+          }
+        }
+      },
+      "500": {
+        "$type": "fontWeight",
+        "$value": 500,
+        "$description": "Figma variable Typography/weight/Medium.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "864bde3def83ff980abcc44931cbf246b7122c67",
+            "variableKey": "98b3faae74d28d07e766d01e0882ab22271db828"
+          }
+        }
+      },
+      "600": {
+        "$type": "fontWeight",
+        "$value": 600,
+        "$description": "Figma variable Typography/weight/Semibold.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "864bde3def83ff980abcc44931cbf246b7122c67",
+            "variableKey": "2ab896d88a87730e5e2cd5025cb5ef26b3c3e259"
+          }
+        }
+      }
+    }
+  }
+}

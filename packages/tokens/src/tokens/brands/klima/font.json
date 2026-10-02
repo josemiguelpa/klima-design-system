@@ -1,0 +1,22 @@
+{
+  "brand": {
+    "klima": {
+      "font": {
+        "family": {
+          "base": {
+            "$type": "fontFamily",
+            "$value": ["Be Vietnam Pro", "system-ui", "sans-serif"],
+            "$description": "Figma variable Typography/type/Heading (used for headings and body text). Fallbacks per ADR-006.",
+            "$extensions": {
+              "software.solenium.figma": {
+                "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+                "collectionKey": "864bde3def83ff980abcc44931cbf246b7122c67",
+                "variableKey": "74cc88dead976b2027da3b47756d1a5940ebd090"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -35,5 +35,6 @@ Las tareas canceladas o supersedidas no son ejecutables, aunque permanezcan en e
 13. `013-icon-inventory-and-provenance.md` — inventario, procedencia y notas de nombres corregidos
 14. `014-icon-normalizer.md`
 15. `015-react-icons-and-tree-shaking.md`
+16. `016-klima-primitives.md` — primitivas de color y tipografía de Klima y Klimaverso
 
 Después se detallan Vue/Astro, Storybook y componentes usando `docs/task-template.md`, cuando las fundaciones estén validadas.

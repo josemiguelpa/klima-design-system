@@ -1,0 +1,57 @@
+{
+  "brand": {
+    "suno": {
+      "lime": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.8157, 1, 0.2549],
+          "alpha": 1,
+          "hex": "#D0FF41"
+        },
+        "$description": "Figma variable primitivas/Klimaverso/Suno/lime.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "57c51984dcd74f79aef2472b01cee981a2d078f9",
+            "variableKey": "1507aabd0750c3069d1c2c501fbbb7b342df5489"
+          }
+        }
+      },
+      "black": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0275, 0.0275, 0.0275],
+          "alpha": 1,
+          "hex": "#070707"
+        },
+        "$description": "Figma variable primitivas/Klimaverso/Suno/black.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "57c51984dcd74f79aef2472b01cee981a2d078f9",
+            "variableKey": "e10a5eb0a662ff3f70c0cf86721396f8a5263fed"
+          }
+        }
+      },
+      "blue": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.2627, 0.5804, 0.7922],
+          "alpha": 1,
+          "hex": "#4394CA"
+        },
+        "$description": "Figma variable primitivas/Klimaverso/Suno/blue.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "57c51984dcd74f79aef2472b01cee981a2d078f9",
+            "variableKey": "9741ccc4980b7baf0bb0a27551a5b509ef1bb8ca"
+          }
+        }
+      }
+    }
+  }
+}

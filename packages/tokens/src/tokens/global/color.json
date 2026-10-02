@@ -3,11 +3,2037 @@
     "neutral": {
       "0": {
         "$type": "color",
-        "$value": { "colorSpace": "srgb", "components": [1, 1, 1], "alpha": 1 }
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 1, 1],
+          "alpha": 1,
+          "hex": "#FFFFFF"
+        },
+        "$description": "Light-mode value of Figma variable semanticas/grey/0.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "5810ebf8b57e52eaad418914c15cddce9f01e71c"
+          }
+        }
+      },
+      "50": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9765, 0.9804, 0.9843],
+          "alpha": 1,
+          "hex": "#F9FAFB"
+        },
+        "$description": "Light-mode value of Figma variable semanticas/grey/50.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "31c90d5245b03e123e4275460aff40270c931021"
+          }
+        }
+      },
+      "100": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9529, 0.9569, 0.9647],
+          "alpha": 1,
+          "hex": "#F3F4F6"
+        },
+        "$description": "Light-mode value of Figma variable semanticas/grey/100.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "9c678a15e6437b85f837f937af1e798e001b5dd1"
+          }
+        }
+      },
+      "200": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.898, 0.9059, 0.9216],
+          "alpha": 1,
+          "hex": "#E5E7EB"
+        },
+        "$description": "Light-mode value of Figma variable semanticas/grey/200.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "0e35ea16eedf1ffce92118a3a224135908231203"
+          }
+        }
+      },
+      "300": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.8196, 0.8353, 0.8588],
+          "alpha": 1,
+          "hex": "#D1D5DB"
+        },
+        "$description": "Light-mode value of Figma variable semanticas/grey/300.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "abf5fc611750eee866969ba11157519c86353958"
+          }
+        }
+      },
+      "400": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.6118, 0.6392, 0.6863],
+          "alpha": 1,
+          "hex": "#9CA3AF"
+        },
+        "$description": "Light-mode value of Figma variable semanticas/grey/400.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "182f05d80ca65de9cc448b40cab7f01b5f7dd6ab"
+          }
+        }
+      },
+      "500": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.4196, 0.4471, 0.502],
+          "alpha": 1,
+          "hex": "#6B7280"
+        },
+        "$description": "Light-mode value of Figma variable semanticas/grey/500.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "b0feadd51a15b982e1702ad7ac7df08f9bac8bc6"
+          }
+        }
+      },
+      "600": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.2941, 0.3333, 0.3882],
+          "alpha": 1,
+          "hex": "#4B5563"
+        },
+        "$description": "Light-mode value of Figma variable semanticas/grey/600.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "8a0a25fb95a1ac25d8055277f9027e53813a9b0d"
+          }
+        }
+      },
+      "700": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.2157, 0.2549, 0.3176],
+          "alpha": 1,
+          "hex": "#374151"
+        },
+        "$description": "Light-mode value of Figma variable semanticas/grey/background/700.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "e263c00e826a0e3df5f7a0d81e30a5a6b68bbce8"
+          }
+        }
+      },
+      "800": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.1216, 0.1608, 0.2157],
+          "alpha": 1,
+          "hex": "#1F2937"
+        },
+        "$description": "Light-mode value of Figma variable semanticas/grey/800.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "18a53c1e61f2aa438bcbdd860e76de6b500e8084"
+          }
+        }
+      },
+      "900": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0667, 0.0941, 0.1529],
+          "alpha": 1,
+          "hex": "#111827"
+        },
+        "$description": "Light-mode value of Figma variable semanticas/grey/900.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "7312a17471c13e80bc0567ce90da40ff2d22a3f7"
+          }
+        }
+      },
+      "925": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0392, 0.0627, 0.1137],
+          "alpha": 1,
+          "hex": "#0A101D"
+        },
+        "$description": "Light-mode value of Figma variable semanticas/grey/925.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "ada7c2eed11763f7b7b3847ed580e173abb23591"
+          }
+        }
       },
       "950": {
         "$type": "color",
-        "$value": { "colorSpace": "srgb", "components": [0.1, 0.1, 0.1], "alpha": 1 }
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0118, 0.0275, 0.0706],
+          "alpha": 1,
+          "hex": "#030712"
+        },
+        "$description": "Light-mode value of Figma variable semanticas/grey/950.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "e057c24d52846e237858da166774d04543fb4503"
+          }
+        }
+      }
+    },
+    "mint": {
+      "50": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.949, 0.9804, 0.9647],
+          "alpha": 1,
+          "hex": "#F2FAF6"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/mint/50.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "ad8dffa8072d566f8d17e86ced5c5b96dc071485"
+          }
+        }
+      },
+      "100": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.8471, 0.949, 0.9098],
+          "alpha": 1,
+          "hex": "#D8F2E8"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/mint/100.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "d4c9c348f6a4797b87a7c381695194d407413012"
+          }
+        }
+      },
+      "200": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.6902, 0.9176, 0.851],
+          "alpha": 1,
+          "hex": "#B0EAD9"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/mint/200.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "4a8f04ccd5ff61c6cc17a875bdb238334bd4b7b1"
+          }
+        }
+      },
+      "300": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.5294, 0.8863, 0.7882],
+          "alpha": 1,
+          "hex": "#87E2C9"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/mint/300.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "c60104c9ef30a358d16603cd639f8b090ee9101d"
+          }
+        }
+      },
+      "400": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.3373, 0.8392, 0.702],
+          "alpha": 1,
+          "hex": "#56D6B3"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/mint/400.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "fc9ae77864116be731927151d02928d9d08ce17f"
+          }
+        }
+      },
+      "500": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.1804, 0.7255, 0.5765],
+          "alpha": 1,
+          "hex": "#2EB993"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/mint/500.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "518cb3821ffde9d3ef113ab0af9636dfefdcd48c"
+          }
+        }
+      },
+      "600": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.1451, 0.6039, 0.4784],
+          "alpha": 1,
+          "hex": "#259A7A"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/mint/600.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "c9cc5da6bc325f3c376b40afb6aa9219cf283fb5"
+          }
+        }
+      },
+      "700": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.1098, 0.4824, 0.3725],
+          "alpha": 1,
+          "hex": "#1C7B5F"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/mint/700.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "bc26bb20f751081b8f3e8cdb8c4a050a91d75253"
+          }
+        }
+      },
+      "800": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0784, 0.349, 0.2627],
+          "alpha": 1,
+          "hex": "#145943"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/mint/800.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "fbec1d72daf8a57c0aaf79294946329063fad203"
+          }
+        }
+      },
+      "900": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.051, 0.2275, 0.1686],
+          "alpha": 1,
+          "hex": "#0D3A2B"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/mint/900.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "e934c84e9eb65c4dd44fbb2fc99f5f2ab0ec3eb2"
+          }
+        }
+      },
+      "950": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0314, 0.1294, 0.098],
+          "alpha": 1,
+          "hex": "#082119"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/mint/950.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "a747067c1a1b13a122c8299571c949ff85cc268a"
+          }
+        }
+      }
+    },
+    "teal": {
+      "50": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9294, 0.9804, 0.9843],
+          "alpha": 1,
+          "hex": "#EDFAFB"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/teal/50.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "79ba7524c46bc200d500746fbfb5563e42794ba5"
+          }
+        }
+      },
+      "100": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.7843, 0.949, 0.9569],
+          "alpha": 1,
+          "hex": "#C8F2F4"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/teal/100.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "b5d5942126eb54df7a22bc11fab872e2d30e640c"
+          }
+        }
+      },
+      "200": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.5686, 0.902, 0.9137],
+          "alpha": 1,
+          "hex": "#91E6E9"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/teal/200.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "1c3500b7701a720cd90630e483f42bcccd5dd703"
+          }
+        }
+      },
+      "300": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.3529, 0.8471, 0.8627],
+          "alpha": 1,
+          "hex": "#5AD8DC"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/teal/300.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "ed47068361ca3a0ca84bb7a1521e5d28f648f86c"
+          }
+        }
+      },
+      "400": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.1373, 0.7882, 0.8078],
+          "alpha": 1,
+          "hex": "#23C9CE"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/teal/400.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "b0e72861f10abcf160f1a7da591c6c7136a7c651"
+          }
+        }
+      },
+      "500": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0, 0.6863, 0.6863],
+          "alpha": 1,
+          "hex": "#00AFAF"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/teal/500.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "42444371b9f154ee2e28e4f5fd3dcf36a9176ec8"
+          }
+        }
+      },
+      "600": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0, 0.5608, 0.5647],
+          "alpha": 1,
+          "hex": "#008F90"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/teal/600.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "596f74260f97c276a762889c49b0ba4c10e420bd"
+          }
+        }
+      },
+      "700": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0, 0.4314, 0.4353],
+          "alpha": 1,
+          "hex": "#006E6F"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/teal/700.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "71ed02c6264509e3a618715aa96ee4cfa95267d3"
+          }
+        }
+      },
+      "800": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0, 0.3098, 0.3137],
+          "alpha": 1,
+          "hex": "#004F50"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/teal/800.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "5e75f53c2295f6513a65c93c9806f7fd3db3beb8"
+          }
+        }
+      },
+      "900": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0, 0.1961, 0.2],
+          "alpha": 1,
+          "hex": "#003233"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/teal/900.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "dc10d5fd8d74d42dcdf6b69b2c0bfdd7a20efa34"
+          }
+        }
+      },
+      "950": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0, 0.102, 0.1059],
+          "alpha": 1,
+          "hex": "#001A1B"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/teal/950.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "1efbd4895a447bbfbe1ba619920dace24e0abe87"
+          }
+        }
+      }
+    },
+    "forest-moss": {
+      "50": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9725, 0.9804, 0.9608],
+          "alpha": 1,
+          "hex": "#F8FAF5"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/forest-moss/50.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "8775e0563ead75cfd3256fefd5fe4cc7255102d0"
+          }
+        }
+      },
+      "100": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9412, 0.9569, 0.902],
+          "alpha": 1,
+          "hex": "#F0F4E6"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/forest-moss/100.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "53f8399ff77fd4b21d096a191d2566a6fb38987b"
+          }
+        }
+      },
+      "200": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.8824, 0.9333, 0.7686],
+          "alpha": 1,
+          "hex": "#E1EEC4"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/forest-moss/200.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "895cdd1e8efadaf93e44e25ec9c4027730fef1f6"
+          }
+        }
+      },
+      "300": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.8196, 0.9255, 0.5765],
+          "alpha": 1,
+          "hex": "#D1EC93"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/forest-moss/300.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "aa13b3cda7e5f30744a8edb9b111310b63b3c4b0"
+          }
+        }
+      },
+      "400": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.7412, 1, 0.1412],
+          "alpha": 1,
+          "hex": "#BDFF24"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/forest-moss/400.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "3a815114b6b651c7aaf7f3fc51449953c90a118c"
+          }
+        }
+      },
+      "500": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.6549, 0.9373, 0],
+          "alpha": 1,
+          "hex": "#A7EF00"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/forest-moss/500.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "1f32d45b9705a233a02c6c56fdc4b297ec756c9f"
+          }
+        }
+      },
+      "600": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.5176, 0.7412, 0],
+          "alpha": 1,
+          "hex": "#84BD00"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/forest-moss/600.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "a165fe5b85507e01a1bbcb793657f7256ec49536"
+          }
+        }
+      },
+      "700": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.3882, 0.5412, 0.0275],
+          "alpha": 1,
+          "hex": "#638A07"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/forest-moss/700.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "ce45856cd6180a925cf5ebe97a5b1504e7a6bdb5"
+          }
+        }
+      },
+      "800": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.2902, 0.4, 0.0314],
+          "alpha": 1,
+          "hex": "#4A6608"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/forest-moss/800.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "b3d335bbd60f9a50a11af5afead05105eda5f0b1"
+          }
+        }
+      },
+      "900": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.2118, 0.2863, 0.0314],
+          "alpha": 1,
+          "hex": "#364908"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/forest-moss/900.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "7de61fb6179edea33f0d5867fbbbe4ba04e275b7"
+          }
+        }
+      },
+      "950": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.1059, 0.1373, 0.0353],
+          "alpha": 1,
+          "hex": "#1B2309"
+        },
+        "$description": "Figma variable semanticas/status/progress-optimized/forest-moss/950.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "711b95cc7309293490f298ec2c478cd72092f975"
+          }
+        }
+      }
+    },
+    "electric-green": {
+      "50": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9176, 0.9843, 0.9098],
+          "alpha": 1,
+          "hex": "#EAFBE8"
+        },
+        "$description": "Figma canvas swatch, frame 205:2; no Figma variable exists yet."
+      },
+      "100": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.7843, 0.9608, 0.7529],
+          "alpha": 1,
+          "hex": "#C8F5C0"
+        },
+        "$description": "Figma canvas swatch, frame 205:2; no Figma variable exists yet."
+      },
+      "200": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.5608, 0.9098, 0.4784],
+          "alpha": 1,
+          "hex": "#8FE87A"
+        },
+        "$description": "Figma canvas swatch, frame 205:2; no Figma variable exists yet."
+      },
+      "300": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.3216, 0.8314, 0.1804],
+          "alpha": 1,
+          "hex": "#52D42E"
+        },
+        "$description": "Figma canvas swatch, frame 205:2; no Figma variable exists yet."
+      },
+      "400": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.2275, 0.7216, 0.0941],
+          "alpha": 1,
+          "hex": "#3AB818"
+        },
+        "$description": "Figma canvas swatch, frame 205:2; no Figma variable exists yet."
+      },
+      "500": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.1765, 0.5882, 0.0588],
+          "alpha": 1,
+          "hex": "#2D960F"
+        },
+        "$description": "Figma canvas swatch, frame 205:2; no Figma variable exists yet."
+      },
+      "600": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.1333, 0.4588, 0.0392],
+          "alpha": 1,
+          "hex": "#22750A"
+        },
+        "$description": "Figma canvas swatch, frame 205:2; no Figma variable exists yet."
+      },
+      "700": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.098, 0.3451, 0.0314],
+          "alpha": 1,
+          "hex": "#195808"
+        },
+        "$description": "Figma canvas swatch, frame 205:2; no Figma variable exists yet."
+      },
+      "800": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0667, 0.2471, 0.0196],
+          "alpha": 1,
+          "hex": "#113F05"
+        },
+        "$description": "Figma canvas swatch, frame 205:2; no Figma variable exists yet."
+      },
+      "900": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0431, 0.1608, 0.0118],
+          "alpha": 1,
+          "hex": "#0B2903"
+        },
+        "$description": "Figma canvas swatch, frame 205:2; no Figma variable exists yet."
+      },
+      "950": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0235, 0.0941, 0.0078],
+          "alpha": 1,
+          "hex": "#061802"
+        },
+        "$description": "Figma canvas swatch, frame 205:2; no Figma variable exists yet."
+      }
+    },
+    "royal-blue": {
+      "50": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9216, 0.9412, 0.9882],
+          "alpha": 1,
+          "hex": "#EBF0FC"
+        },
+        "$description": "Figma variable semanticas/status/progress-normal/royal-blue/50.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "45bafad2803c2c7be63627bd5eb600c6e9ca134f"
+          }
+        }
+      },
+      "100": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.6588, 0.7412, 0.9333],
+          "alpha": 1,
+          "hex": "#A8BDEE"
+        },
+        "$description": "Figma variable semanticas/status/progress-normal/royal-blue/100.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "4b760095f83a04940dd10fd2c1e5ee2977ac6107"
+          }
+        }
+      },
+      "200": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.4196, 0.5608, 0.9098],
+          "alpha": 1,
+          "hex": "#6B8FE8"
+        },
+        "$description": "Figma variable semanticas/status/progress-normal/royal-blue/200.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "02e0c0e33c8b64dd752d2511200e09ea2b45f930"
+          }
+        }
+      },
+      "300": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.2549, 0.4118, 0.8824],
+          "alpha": 1,
+          "hex": "#4169E1"
+        },
+        "$description": "Figma variable semanticas/status/progress-normal/royal-blue/300.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "2bb668429b36ae439bc5640017555c076969171f"
+          }
+        }
+      },
+      "400": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.1765, 0.3176, 0.7725],
+          "alpha": 1,
+          "hex": "#2D51C5"
+        },
+        "$description": "Figma variable semanticas/status/progress-normal/royal-blue/400.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "b190d6ae422a0e9a1364eb853a4885b0c8923417"
+          }
+        }
+      },
+      "500": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.1333, 0.2667, 0.6588],
+          "alpha": 1,
+          "hex": "#2244A8"
+        },
+        "$description": "Figma variable semanticas/status/progress-normal/royal-blue/500.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "9a08e8bb81ae3ac3e79c977b3daf5ce81164908c"
+          }
+        }
+      },
+      "600": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.098, 0.2196, 0.549],
+          "alpha": 1,
+          "hex": "#19388C"
+        },
+        "$description": "Figma variable semanticas/status/progress-normal/royal-blue/600.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "4112f38dcc40117a675f56bf57c6a55bb1406212"
+          }
+        }
+      },
+      "700": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0667, 0.1725, 0.4392],
+          "alpha": 1,
+          "hex": "#112C70"
+        },
+        "$description": "Figma variable semanticas/status/progress-normal/royal-blue/700.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "24defb8b12adadc57cd6e99aa1f96771734dfee5"
+          }
+        }
+      },
+      "800": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0471, 0.1294, 0.3294],
+          "alpha": 1,
+          "hex": "#0C2154"
+        },
+        "$description": "Figma variable semanticas/status/progress-normal/royal-blue/800.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "85230a52cc9c84452fc0d7ed4873098ad0cafdea"
+          }
+        }
+      },
+      "900": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0314, 0.0863, 0.2196],
+          "alpha": 1,
+          "hex": "#081638"
+        },
+        "$description": "Figma variable semanticas/status/progress-normal/royal-blue/900.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "d45bdb4e81775ddee1ffd54f48f4b9138b8268d1"
+          }
+        }
+      },
+      "950": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0157, 0.0431, 0.1255],
+          "alpha": 1,
+          "hex": "#040B20"
+        },
+        "$description": "Figma variable semanticas/status/progress-normal/royal-blue/950.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "cf9c3ad92ee7b071be75e2d94417238762a197f8"
+          }
+        }
+      }
+    },
+    "red": {
+      "50": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 0.9647, 0.9725],
+          "alpha": 1,
+          "hex": "#FFF6F8"
+        },
+        "$description": "Figma variable semanticas/status/danger/red/50.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "b6b0517f92d2e207a45f39e351ff8c40955adb9d"
+          }
+        }
+      },
+      "100": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 0.9373, 0.9529],
+          "alpha": 1,
+          "hex": "#FFEFF3"
+        },
+        "$description": "Figma variable semanticas/status/danger/red/100.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "46c6a9b15beb0c0764412da9efc971bb4e5aeb11"
+          }
+        }
+      },
+      "200": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 0.8706, 0.898],
+          "alpha": 1,
+          "hex": "#FFDEE5"
+        },
+        "$description": "Figma variable semanticas/status/danger/red/200.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "9a5d9f6684e0fa95bd94653b5f6da5191325506a"
+          }
+        }
+      },
+      "300": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 0.7647, 0.8157],
+          "alpha": 1,
+          "hex": "#FFC3D0"
+        },
+        "$description": "Figma variable semanticas/status/danger/red/300.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "625bd5af1b2198804767bfbf124b29dbe80b5fb9"
+          }
+        }
+      },
+      "400": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9412, 0.1412, 0.3137],
+          "alpha": 1,
+          "hex": "#F02450"
+        },
+        "$description": "Figma variable semanticas/status/danger/red/400.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "1a4eb1e6c1dbee92947dbfbe7413f7fc5f367eac"
+          }
+        }
+      },
+      "500": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.8235, 0.0588, 0.2235],
+          "alpha": 1,
+          "hex": "#D20F39"
+        },
+        "$description": "Figma variable semanticas/status/danger/red/500.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "dc92c858012f8add3a082d9362118f6e73506cf5"
+          }
+        }
+      },
+      "600": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.6549, 0.0471, 0.1765],
+          "alpha": 1,
+          "hex": "#A70C2D"
+        },
+        "$description": "Figma variable semanticas/status/danger/red/600.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "344b9e354370dc14924103823aa10ac0e7518a32"
+          }
+        }
+      },
+      "700": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.4745, 0.0431, 0.1373],
+          "alpha": 1,
+          "hex": "#790B23"
+        },
+        "$description": "Figma variable semanticas/status/danger/red/700.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "d581dd6f4ec9dd87edc422b0e5784b045028c569"
+          }
+        }
+      },
+      "800": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.3216, 0.0392, 0.102],
+          "alpha": 1,
+          "hex": "#520A1A"
+        },
+        "$description": "Figma variable semanticas/status/danger/red/800.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "1942c0a878ef009841284efd89781a062129186c"
+          }
+        }
+      },
+      "900": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.2078, 0.0353, 0.0706],
+          "alpha": 1,
+          "hex": "#350912"
+        },
+        "$description": "Figma variable semanticas/status/danger/red/900.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "62eb7e1614d4cf09728a5a6e5df82e5827a9c17d"
+          }
+        }
+      },
+      "950": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.1333, 0.0275, 0.051],
+          "alpha": 1,
+          "hex": "#22070D"
+        },
+        "$description": "Figma variable semanticas/status/danger/red/950.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "9e31a620cf1f67e8eadf563bdcc697400c8a01ce"
+          }
+        }
+      }
+    },
+    "yellow": {
+      "50": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 0.9961, 0.9765],
+          "alpha": 1,
+          "hex": "#FFFEF9"
+        },
+        "$description": "Figma variable semanticas/status/alert/yellow/50.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "df7746ed57544143d7ddb8e1147fb2c8b97c308c"
+          }
+        }
+      },
+      "100": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 0.9882, 0.9451],
+          "alpha": 1,
+          "hex": "#FFFCF1"
+        },
+        "$description": "Figma variable semanticas/status/alert/yellow/100.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "0d2d9ddfef15b23b9d36cf8b613f012fb4e6e423"
+          }
+        }
+      },
+      "200": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9961, 0.9529, 0.7843],
+          "alpha": 1,
+          "hex": "#FEF3C8"
+        },
+        "$description": "Figma variable semanticas/status/alert/yellow/200.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "9cc43809ad16ce4c6637c8e3e7bc0a200b51f172"
+          }
+        }
+      },
+      "300": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9804, 0.8745, 0.5529],
+          "alpha": 1,
+          "hex": "#FADF8D"
+        },
+        "$description": "Figma variable semanticas/status/alert/yellow/300.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "eeaa35c2b352f6cceaf38cf8f5bf774144737e8b"
+          }
+        }
+      },
+      "400": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9608, 0.7373, 0.2],
+          "alpha": 1,
+          "hex": "#F5BC33"
+        },
+        "$description": "Figma variable semanticas/status/alert/yellow/400.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "c8c106bec1e11749df213ee0c9c58ab3a63dd472"
+          }
+        }
+      },
+      "500": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9333, 0.6, 0.0706],
+          "alpha": 1,
+          "hex": "#EE9912"
+        },
+        "$description": "Figma variable semanticas/status/alert/yellow/500.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "ba196489786b9be0b5725836c1cbe28eaf8e2aae"
+          }
+        }
+      },
+      "600": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.8275, 0.4549, 0.0471],
+          "alpha": 1,
+          "hex": "#D3740C"
+        },
+        "$description": "Figma variable semanticas/status/alert/yellow/600.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "352b4aa623c143635fd4dddaa692cf66927c0c67"
+          }
+        }
+      },
+      "700": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.5569, 0.2471, 0.0706],
+          "alpha": 1,
+          "hex": "#8E3F12"
+        },
+        "$description": "Figma variable semanticas/status/alert/yellow/700.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "bbc0837ebc8f9709b688f0379fe4068312d77796"
+          }
+        }
+      },
+      "800": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.4588, 0.2078, 0.0706],
+          "alpha": 1,
+          "hex": "#753512"
+        },
+        "$description": "Figma variable semanticas/status/alert/yellow/800.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "eabc2908fb5cfd282cf9b509769946fe8f2295e7"
+          }
+        }
+      },
+      "900": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.2627, 0.102, 0.0196],
+          "alpha": 1,
+          "hex": "#431A05"
+        },
+        "$description": "Figma variable semanticas/status/alert/yellow/900.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "fc63a22f1782a19e3e2523655a6051ad3f3c7787"
+          }
+        }
+      },
+      "950": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.1961, 0.0824, 0.0235],
+          "alpha": 1,
+          "hex": "#321506"
+        },
+        "$description": "Figma variable semanticas/status/alert/yellow/950.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "65d3a2ac0e2605631b5626dc4f7428a1c85bfb02"
+          }
+        }
+      }
+    },
+    "orange": {
+      "50": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 0.9569, 0.949],
+          "alpha": 1,
+          "hex": "#FFF4F2"
+        },
+        "$description": "Figma variable semanticas/status/alert/orange/50.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "c85dec55d6d87c09d3b3321ad6c1afc25d219527"
+          }
+        }
+      },
+      "100": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 0.898, 0.8784],
+          "alpha": 1,
+          "hex": "#FFE5E0"
+        },
+        "$description": "Figma variable semanticas/status/alert/orange/100.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "d8c3876e3042dd9a0dd79b8a3876c417099f062e"
+          }
+        }
+      },
+      "200": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 0.749, 0.6902],
+          "alpha": 1,
+          "hex": "#FFBFB0"
+        },
+        "$description": "Figma variable semanticas/status/alert/orange/200.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "10aee73f9fea9fd613b8d4f1692c316b7f7af9f6"
+          }
+        }
+      },
+      "300": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 0.5882, 0.4941],
+          "alpha": 1,
+          "hex": "#FF967E"
+        },
+        "$description": "Figma variable semanticas/status/alert/orange/300.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "b7f1ece439f16e1788bc8d73f9aef6605f408484"
+          }
+        }
+      },
+      "400": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9765, 0.3725, 0.251],
+          "alpha": 1,
+          "hex": "#F95F40"
+        },
+        "$description": "Figma variable semanticas/status/alert/orange/400.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "8647b7c5164e73aa70acfb7cb069e3c571989844"
+          }
+        }
+      },
+      "500": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.8784, 0.2431, 0.1333],
+          "alpha": 1,
+          "hex": "#E03E22"
+        },
+        "$description": "Figma variable semanticas/status/alert/orange/500.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "933b1813877b119e0c92867c5bfd14fa28b48762"
+          }
+        }
+      },
+      "600": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.7451, 0.1725, 0.0863],
+          "alpha": 1,
+          "hex": "#BE2C16"
+        },
+        "$description": "Figma variable semanticas/status/alert/orange/600.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "44508f289f5e9ff0f276e01380acb136dc48704f"
+          }
+        }
+      },
+      "700": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.549, 0.1176, 0.0588],
+          "alpha": 1,
+          "hex": "#8C1E0F"
+        },
+        "$description": "Figma variable semanticas/status/alert/orange/700.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "57b5f6794dcaa723c26f628ae30f8ed39d86bb93"
+          }
+        }
+      },
+      "800": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.4196, 0.0824, 0.0353],
+          "alpha": 1,
+          "hex": "#6B1509"
+        },
+        "$description": "Figma variable semanticas/status/alert/orange/800.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "b5ada8569f03a6157912baa69d8da22b47abed09"
+          }
+        }
+      },
+      "900": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.2392, 0.0431, 0.0196],
+          "alpha": 1,
+          "hex": "#3D0B05"
+        },
+        "$description": "Figma variable semanticas/status/alert/orange/900.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "a68047ef4f8af8b763b671c1caf503b9ab3d1015"
+          }
+        }
+      },
+      "950": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.1569, 0.0275, 0.0118],
+          "alpha": 1,
+          "hex": "#280703"
+        },
+        "$description": "Figma variable semanticas/status/alert/orange/950.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "e1af936a29f427603d3b09d79f8ffaed2bb56b32"
+          }
+        }
+      }
+    },
+    "wine": {
+      "50": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9804, 0.9137, 0.9529],
+          "alpha": 1,
+          "hex": "#FAE9F3"
+        },
+        "$description": "Figma variable semanticas/status/critical/wine/50.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "eb7405e795d2fa7d87a195c9a2a56019211648bb"
+          }
+        }
+      },
+      "100": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9608, 0.8235, 0.9098],
+          "alpha": 1,
+          "hex": "#F5D2E8"
+        },
+        "$description": "Figma variable semanticas/status/critical/wine/100.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "a944afbee951ea451e7db9e987d203f09bc34399"
+          }
+        }
+      },
+      "200": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9098, 0.6588, 0.8157],
+          "alpha": 1,
+          "hex": "#E8A8D0"
+        },
+        "$description": "Figma variable semanticas/status/critical/wine/200.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "d5d1a1f4abe1d5f86aecc5603f010e1b3ef5a52b"
+          }
+        }
+      },
+      "300": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.8314, 0.4784, 0.6902],
+          "alpha": 1,
+          "hex": "#D47AB0"
+        },
+        "$description": "Figma variable semanticas/status/critical/wine/300.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "9906870ca057fc67710fd8219189118507e3eb0e"
+          }
+        }
+      },
+      "400": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.5373, 0.1333, 0.3255],
+          "alpha": 1,
+          "hex": "#892253"
+        },
+        "$description": "Figma variable semanticas/status/critical/wine/400.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "b9d85aa84f2068bd159b0ece1a4b0422aa0fa88e"
+          }
+        }
+      },
+      "500": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.4549, 0.102, 0.2745],
+          "alpha": 1,
+          "hex": "#741A46"
+        },
+        "$description": "Figma variable semanticas/status/critical/wine/500.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "db11bccc9f841d3c5cc955bd58c490edb81b5488"
+          }
+        }
+      },
+      "600": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.3686, 0.0706, 0.2196],
+          "alpha": 1,
+          "hex": "#5E1238"
+        },
+        "$description": "Figma variable semanticas/status/critical/wine/600.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "6dfbf71819c70a9332287ff24311e64a0a657f43"
+          }
+        }
+      },
+      "700": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.2784, 0.051, 0.1647],
+          "alpha": 1,
+          "hex": "#470D2A"
+        },
+        "$description": "Figma variable semanticas/status/critical/wine/700.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "71ad879aa55ebfb92ac5084ec2e5110e7dd39dc0"
+          }
+        }
+      },
+      "800": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.2039, 0.0314, 0.1176],
+          "alpha": 1,
+          "hex": "#34081E"
+        },
+        "$description": "Figma variable semanticas/status/critical/wine/800.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "efdb4a6aa0d731ff23bd9270566aac46a03a30d4"
+          }
+        }
+      },
+      "900": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.1333, 0.0196, 0.0784],
+          "alpha": 1,
+          "hex": "#220514"
+        },
+        "$description": "Figma variable semanticas/status/critical/wine/900.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "3bd0e5f82bbd1d6b4b4b2a97a836f0fb52804f96"
+          }
+        }
+      },
+      "950": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0824, 0.0118, 0.051],
+          "alpha": 1,
+          "hex": "#15030D"
+        },
+        "$description": "Figma variable semanticas/status/critical/wine/950.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "75a33936992939a855b0cf6b6718c7360fadefa6"
+          }
+        }
+      }
+    },
+    "lavender": {
+      "50": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9843, 0.9725, 1],
+          "alpha": 1,
+          "hex": "#FBF8FF"
+        },
+        "$description": "Figma variable semanticas/status/informational/lavender/50.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "5d63b7ab925052cf120c4f67b51c3346c3e97c7a"
+          }
+        }
+      },
+      "100": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.9569, 0.9333, 1],
+          "alpha": 1,
+          "hex": "#F4EEFF"
+        },
+        "$description": "Figma variable semanticas/status/informational/lavender/100.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "e1839ba2e1fe56b72b92cf3e6d918f9c2d4e9509"
+          }
+        }
+      },
+      "200": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.902, 0.8392, 1],
+          "alpha": 1,
+          "hex": "#E6D6FF"
+        },
+        "$description": "Figma variable semanticas/status/informational/lavender/200.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "ce5836bb8f506c9dbab5344bcb215223945e86ee"
+          }
+        }
+      },
+      "300": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.8078, 0.7294, 1],
+          "alpha": 1,
+          "hex": "#CEBAFF"
+        },
+        "$description": "Figma variable semanticas/status/informational/lavender/300.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "3d1bfc560a5f762a10dd2471c160a334ec21cfad"
+          }
+        }
+      },
+      "400": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.6902, 0.5647, 0.9333],
+          "alpha": 1,
+          "hex": "#B090EE"
+        },
+        "$description": "Figma variable semanticas/status/informational/lavender/400.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "fb30790445e42778d39cd3d9ebf08177ce9cbeb0"
+          }
+        }
+      },
+      "500": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.5647, 0.4392, 0.8471],
+          "alpha": 1,
+          "hex": "#9070D8"
+        },
+        "$description": "Figma variable semanticas/status/informational/lavender/500.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "e5ee9f1101037d8dc20d4ab796ce0feed987c454"
+          }
+        }
+      },
+      "600": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.4314, 0.3098, 0.7333],
+          "alpha": 1,
+          "hex": "#6E4FBB"
+        },
+        "$description": "Figma variable semanticas/status/informational/lavender/600.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "f3561b1fd3b056f44a6017032e1695188fd69683"
+          }
+        }
+      },
+      "700": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.302, 0.1922, 0.6039],
+          "alpha": 1,
+          "hex": "#4D319A"
+        },
+        "$description": "Figma variable semanticas/status/informational/lavender/700.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "b1651ca2b4cac6f50397b49c7bea768ce9263d66"
+          }
+        }
+      },
+      "800": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.2353, 0.1373, 0.4863],
+          "alpha": 1,
+          "hex": "#3C237C"
+        },
+        "$description": "Figma variable semanticas/status/informational/lavender/800.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "6e108504a2b4b3b0e8944821f0f8787f9d5b0949"
+          }
+        }
+      },
+      "900": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.1333, 0.0706, 0.3059],
+          "alpha": 1,
+          "hex": "#22124E"
+        },
+        "$description": "Figma variable semanticas/status/informational/lavender/900.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "93c51ad312ff10bd114474761084762dd3b40966"
+          }
+        }
+      },
+      "950": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.0824, 0.0431, 0.2],
+          "alpha": 1,
+          "hex": "#150B33"
+        },
+        "$description": "Figma variable semanticas/status/informational/lavender/950.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "93eb5564b23962a0b450e11133e377ca55bd7fb8"
+          }
+        }
       }
     }
   }

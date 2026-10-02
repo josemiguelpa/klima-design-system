@@ -23,7 +23,7 @@ La compatibilidad se sustituye por una frontera de migración documentada en [`d
 
 Las equivalencias documentadas son orientación de migración, no una promesa de API compatible.
 
-## Repositorios anteriores
+## Repositorios anterioresya no m
 
 - `solenium-design-system` y `solenium-components` permanecen como referencias históricas y fuentes de auditoría.
 - No reciben nuevas funcionalidades por parte de este repositorio.
