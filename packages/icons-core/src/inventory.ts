@@ -12,6 +12,8 @@ export interface RawIcon {
   svg: string;
   /** Component set that owns this component when it is a variant (UI components, not icons). */
   variantOf?: string;
+  /** Figma could not render the component as SVG (e.g. empty or hidden content). */
+  exportFailed?: boolean;
 }
 
 export type IconOrigin = "iconsax" | "custom";
@@ -68,11 +70,18 @@ export function sha256(value: string): string {
   return createHash("sha256").update(value).digest("hex");
 }
 
+export interface InventoryOptions {
+  /** Figma frames that only contain third-party brand marks (company and crypto logos). */
+  thirdPartyLogoFrames?: readonly string[];
+}
+
 export function buildInventory(
   figmaFileKey: string,
   style: IconStyle,
   icons: readonly RawIcon[],
+  options: InventoryOptions = {},
 ): Inventory {
+  const logoFrames = new Set(options.thirdPartyLogoFrames ?? []);
   const entries = icons.map((icon): InventoryEntry => {
     const parsed = parseFigmaName(icon.figmaName);
     const proposed = proposeName(parsed.base);
@@ -84,10 +93,15 @@ export function buildInventory(
     if (proposed.name !== parsed.base) issues.push(`normalized-name:${parsed.base}`);
     if (icon.width !== 24 || icon.height !== 24)
       issues.push(`non-standard-size:${icon.width}x${icon.height}`);
-    if (icon.variantOf) {
+    if (icon.exportFailed) {
+      issues.push("no-svg-export");
+      status = "excluded";
+    } else if (parsed.style && parsed.style !== style) {
+      status = "excluded";
+    } else if (icon.variantOf) {
       issues.push(`component-variant:${icon.variantOf}`);
       status = "excluded";
-    } else if (THIRD_PARTY_LOGOS.has(proposed.name)) {
+    } else if (THIRD_PARTY_LOGOS.has(proposed.name) || logoFrames.has(icon.frame)) {
       issues.push("third-party-logo");
       status = "excluded";
     } else if (!proposed.name || GENERIC_NAME.test(proposed.name)) {

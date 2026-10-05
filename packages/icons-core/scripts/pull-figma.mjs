@@ -98,7 +98,7 @@ async function pullStyle(style, headers) {
 
   const raws = await mapLimit(components, CONCURRENCY, async (component) => {
     const url = urls[component.nodeId];
-    if (!url) throw new Error(`No SVG export for ${component.figmaName} (${component.nodeId})`);
+    if (!url) return { ...component, svg: "", exportFailed: true };
     return { ...component, svg: await (await request(url, {})).text() };
   });
 
@@ -106,10 +106,14 @@ async function pullStyle(style, headers) {
   await rm(sourceDir, { recursive: true, force: true });
   await mkdir(sourceDir, { recursive: true });
   await Promise.all(
-    raws.map((raw) => writeFile(join(sourceDir, `${raw.nodeId.replace(":", "-")}.svg`), raw.svg)),
+    raws
+      .filter((raw) => !raw.exportFailed)
+      .map((raw) => writeFile(join(sourceDir, `${raw.nodeId.replace(":", "-")}.svg`), raw.svg)),
   );
 
-  const inventory = buildInventory(config.fileKey, style, raws);
+  const inventory = buildInventory(config.fileKey, style, raws, {
+    thirdPartyLogoFrames: config.thirdPartyLogoFrames?.[style] ?? [],
+  });
   await mkdir(join(root, "inventory"), { recursive: true });
   await writeFile(
     join(root, "inventory", `${style}.json`),

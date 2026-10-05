@@ -6,20 +6,29 @@ import { build } from "vite";
 import { describe, expect, it } from "vitest";
 
 const fixtureRoot = fileURLToPath(new URL("..", import.meta.url));
-const barrelUrl = import.meta.resolve("@klima-ds/icons-react/linear");
-const barrel = await readFile(new URL(barrelUrl), "utf8");
-// Maps exported component names to their per-icon module, e.g. SearchNormal -> search-normal.
-const modules = Object.fromEntries(
-  [...barrel.matchAll(/export \{ (\w+) \} from "\.\/([\w-]+)\.js";/g)].map(([, name, file]) => [
-    name,
-    file,
-  ]),
+const STYLES = ["linear", "bold", "twotone", "bulk", "broken"];
+
+/** Maps exported component names to their per-icon module, e.g. SearchNormal -> search-normal. */
+async function catalog(style) {
+  const barrelUrl = import.meta.resolve(`@klima-ds/icons-react/${style}`);
+  const barrel = await readFile(new URL(barrelUrl), "utf8");
+  const modules = Object.fromEntries(
+    [...barrel.matchAll(/export \{ (\w+) \} from "\.\/([\w-]+)\.js";/g)].map(([, name, file]) => [
+      name,
+      file,
+    ]),
+  );
+  return { barrelUrl, modules, names: Object.keys(modules).sort() };
+}
+const catalogs = Object.fromEntries(
+  await Promise.all(STYLES.map(async (style) => [style, await catalog(style)])),
 );
-const names = Object.keys(modules).sort();
+const { modules, names } = catalogs.linear;
 
 /** Longest path data of an icon: a fingerprint that only appears if the icon is bundled. */
-async function fingerprint(name) {
-  const source = await readFile(new URL(`./${modules[name]}.js`, barrelUrl), "utf8");
+async function fingerprint(name, style = "linear") {
+  const { barrelUrl, modules: styleModules } = catalogs[style];
+  const source = await readFile(new URL(`./${styleModules[name]}.js`, barrelUrl), "utf8");
   const paths = [...source.matchAll(/"d":"([^"]+)"/g)].map(([, d]) => d);
   return paths.sort((a, b) => b.length - a.length)[0];
 }
@@ -79,6 +88,51 @@ describe("@klima-ds/icons-react tree-shaking", () => {
     );
     expect(code).toContain(await fingerprint(control));
     expect(code).not.toContain(await fingerprint(first));
+  });
+
+  it("bundles only the imported styles of an icon available in every style", async () => {
+    // An icon present in all styles where each style has path data no other style contains.
+    const sourceOf = async (name, style) =>
+      readFile(new URL(`./${modules[name]}.js`, catalogs[style].barrelUrl), "utf8");
+    let shared;
+    let prints;
+    for (const name of names) {
+      if (!STYLES.every((style) => catalogs[style].modules[name] === modules[name])) continue;
+      const sources = Object.fromEntries(
+        await Promise.all(STYLES.map(async (style) => [style, await sourceOf(name, style)])),
+      );
+      const unique = Object.fromEntries(
+        STYLES.map((style) => {
+          const own = [...sources[style].matchAll(/"d":"([^"]+)"/g)].map(([, d]) => d);
+          const others = STYLES.filter((other) => other !== style).map((other) => sources[other]);
+          const candidates = own.filter((d) => others.every((source) => !source.includes(d)));
+          return [style, candidates.sort((a, b) => b.length - a.length)[0]];
+        }),
+      );
+      if (STYLES.every((style) => unique[style])) {
+        shared = name;
+        prints = unique;
+        break;
+      }
+    }
+    expect(shared).toBeTruthy();
+
+    const linearOnly = await bundle(
+      `import { ${shared} } from "@klima-ds/icons-react/linear";\nglobalThis.icons = [${shared}];`,
+    );
+    expect(linearOnly).toContain(prints.linear);
+    for (const style of STYLES.filter((style) => style !== "linear"))
+      expect(linearOnly, style).not.toContain(prints[style]);
+
+    const mixed = await bundle(
+      `import { ${shared} } from "@klima-ds/icons-react/linear";\n` +
+        `import { ${shared} as Bold } from "@klima-ds/icons-react/bold";\n` +
+        `globalThis.icons = [${shared}, Bold];`,
+    );
+    expect(mixed).toContain(prints.linear);
+    expect(mixed).toContain(prints.bold);
+    for (const style of ["twotone", "bulk", "broken"])
+      expect(mixed, style).not.toContain(prints[style]);
   });
 
   it("type-checks the public API", () => {

@@ -31,7 +31,7 @@ Generar un subconjunto representativo de iconos React con imports individuales y
 
 ## Implementación
 
-- Contrato de imports por estilo según [ADR-007](../decisions/007-icon-style-entry-points.md): `@klima-ds/icons-react/linear` y `@klima-ds/icons-react/linear/<icono>`.
+- Contrato de imports por estilo según [ADR-007](../decisions/007-icon-style-entry-points.md): `@klima-ds/icons-react/<estilo>` y `@klima-ds/icons-react/<estilo>/<icono>` para `linear`, `bold`, `twotone`, `bulk` y `broken` (593, 443, 721, 723 y 685 iconos).
 - `scripts/build.mjs` genera `dist/` desde el inventario y los SVG normalizados.
   - Sin fuentes descargadas (CI), genera un set sintético desde los fixtures de `icons-core`.
   - Ese set nunca puede publicarse.
@@ -41,6 +41,8 @@ Generar un subconjunto representativo de iconos React con imports individuales y
   - varios imports;
   - un import por subpath.
 
-  En cada caso verifica que el bundle no contiene la geometría de iconos no importados. También ejecuta `tsc` sobre `test/types.ts`.
+  - un mismo icono en uno y dos estilos.
+
+  En cada caso verifica que el bundle no contiene la geometría de iconos ni estilos no importados. También ejecuta `tsc` sobre `test/types.ts`.
 
 - La prueba se validó rompiendo a propósito el tree-shaking (sin `@__PURE__` y con `sideEffects: true`): falla.

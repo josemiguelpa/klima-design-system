@@ -6,5 +6,9 @@
     "twotone": "2899:2425",
     "bulk": "2899:2130",
     "broken": "2898:44796"
+  },
+  "thirdPartyLogoFrames": {
+    "twotone": ["two-tone"],
+    "bulk": ["bulk"]
   }
 }

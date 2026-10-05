@@ -55,24 +55,31 @@ async function syntheticStyles() {
   const icons = await Promise.all(
     SYNTHETIC.map(async (name) => {
       const file = join(coreRoot, "test-fixtures", `${name}.svg`);
-      const { node } = normalizeSvg(await readFile(file, "utf8"), {
-        file,
-        idPrefix: `klima-linear-synthetic-${name}`,
-      });
-      const component = `Synthetic${name.charAt(0).toUpperCase()}${name.slice(1)}`;
-      return { name: `synthetic-${name}`, component, node };
+      return { name, source: await readFile(file, "utf8"), file };
     }),
   );
-  return [
-    {
-      style: "linear",
-      icons,
-      info: { count: icons.length, unconfirmedProvenance: 0, multicolor: [] },
-    },
-  ];
+  // Each style gets one extra style-specific path so styles stay distinguishable in tests.
+  return ICON_STYLES.map((style, index) => ({
+    style,
+    icons: icons.map(({ name, source, file }) => ({
+      name: `synthetic-${name}`,
+      component: `Synthetic${name.charAt(0).toUpperCase()}${name.slice(1)}`,
+      node: normalizeSvg(
+        source.replace("</svg>", `<path d="M${index + 1} 1h${index + 2}" stroke="#292D32"/></svg>`),
+        { file, idPrefix: `klima-${style}-synthetic-${name}` },
+      ).node,
+    })),
+    info: { count: icons.length, unconfirmedProvenance: 0, multicolor: [] },
+  }));
 }
 
 let styles = await figmaStyles();
+const missing = ICON_STYLES.filter((style) => !styles.some((entry) => entry.style === style));
+if (styles.length > 0 && missing.length > 0)
+  throw new Error(
+    `icons-react: missing pulled sources for ${missing.join(", ")}. ` +
+      `Run \`pnpm --filter @klima-ds/icons-core pull ${missing.join(" ")}\`.`,
+  );
 const source = styles.length > 0 ? "figma" : "synthetic";
 if (source === "synthetic") {
   console.warn(

@@ -61,6 +61,8 @@ describe("buildInventory", () => {
       raw("1:3", "vuesax/linear/Instagram"),
       raw("1:4", "vuesax/linear/small", undefined, 20),
       { ...raw("1:5", "State=checked, Type=Square"), variantOf: "checkbox" },
+      raw("1:6", "vuesax/bulk/add"),
+      { ...raw("1:7", "vuesax/linear/empty", ""), exportFailed: true },
     ]);
     const byNode = Object.fromEntries(entries.map((entry) => [entry.figma.nodeId, entry]));
     expect(byNode["1:1"]).toMatchObject({
@@ -77,6 +79,26 @@ describe("buildInventory", () => {
     expect(byNode["1:4"]?.issues).toContain("non-standard-size:20x20");
     expect(byNode["1:5"]).toMatchObject({ status: "excluded" });
     expect(byNode["1:5"]?.issues).toContain("component-variant:checkbox");
+    expect(byNode["1:6"]).toMatchObject({ status: "excluded" });
+    expect(byNode["1:6"]?.issues).toContain("style-mismatch:bulk");
+    expect(byNode["1:7"]).toMatchObject({ status: "excluded" });
+    expect(byNode["1:7"]?.issues).toContain("no-svg-export");
+  });
+
+  it("excludes every component of a third-party logo frame", () => {
+    const { entries } = buildInventory(
+      "file",
+      "twotone",
+      [
+        { ...raw("1:1", "vuesax/twotone/binance-coin-bnb"), frame: "two-tone" },
+        raw("1:2", "vuesax/twotone/add"),
+      ],
+      { thirdPartyLogoFrames: ["two-tone"] },
+    );
+    expect(entries.map((entry) => [entry.name, entry.status])).toEqual([
+      ["add", "candidate"],
+      ["binance-coin-bnb", "excluded"],
+    ]);
   });
 
   it("collapses identical duplicates and blocks conflicting ones", () => {
