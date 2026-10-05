@@ -27,3 +27,15 @@ Reemplazar el generador basado en regex por una transformación estructural test
 - Idempotencia: normalizar dos veces produce el mismo resultado.
 - Los snapshots incluyen stroke, fill, clip paths y logo multicolor.
 - Un SVG inválido falla con nombre de archivo y causa.
+
+## Implementación
+
+- `packages/icons-core/src/normalize.ts`:
+  - SVGO 4, que trabaja sobre el AST, con `preset-default`, `removeDimensions` y `prefixIds`;
+  - el plugin `klimaThemeColor` convierte `#292D32` a `currentColor`;
+  - un icono con otros colores se marca `multicolor` y conserva su paleta;
+  - los colores dentro de `<clipPath>` y `<mask>` no cuentan como paleta.
+- Si falta `viewBox`, se deriva de `width`/`height`. Un SVG sin ambos, o con markup inválido, falla indicando el archivo y la causa.
+- Pruebas en `packages/icons-core/src/__tests__/normalize.test.ts`:
+  - SVG sintéticos con stroke, fill, duotono, clip path y logo multicolor;
+  - snapshots e idempotencia.

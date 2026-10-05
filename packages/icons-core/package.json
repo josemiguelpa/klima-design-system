@@ -1,0 +1,35 @@
+{
+  "name": "@klima-ds/icons-core",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Canonical SVG sources, inventory and generators for Klima icon packages",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "pull": "pnpm run build && node scripts/pull-figma.mjs"
+  },
+  "dependencies": {
+    "svgo": "^4.1.0"
+  },
+  "devDependencies": {
+    "@klima-ds/eslint-config": "workspace:*",
+    "@klima-ds/typescript-config": "workspace:*",
+    "@types/node": "^26.6.2",
+    "eslint": "^10.10.0",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.0"
+  }
+}

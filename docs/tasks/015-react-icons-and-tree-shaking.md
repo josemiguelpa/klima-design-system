@@ -28,3 +28,19 @@ Generar un subconjunto representativo de iconos React con imports individuales y
 - `import Search from "@klima-ds/icons-react/search"` o contrato equivalente funciona.
 - El bundle de un solo icono no contiene paths de los iconos de control.
 - El paquete no incluye Vue, Astro ni el catálogo SVG fuente.
+
+## Implementación
+
+- Contrato de imports por estilo según [ADR-007](../decisions/007-icon-style-entry-points.md): `@klima-ds/icons-react/linear` y `@klima-ds/icons-react/linear/<icono>`.
+- `scripts/build.mjs` genera `dist/` desde el inventario y los SVG normalizados.
+  - Sin fuentes descargadas (CI), genera un set sintético desde los fixtures de `icons-core`.
+  - Ese set nunca puede publicarse.
+- Cada icono es un módulo ESM con `/* @__PURE__ */ createIcon(...)`, `forwardRef` (React ≥ 18), `size`, `title` accesible (`role="img"` + `aria-labelledby`; sin título, `aria-hidden`) y props del consumidor aplicadas después de los defaults.
+- `fixtures/react-vite/test/tree-shaking.test.js` compila con Vite:
+  - un import desde el barrel;
+  - varios imports;
+  - un import por subpath.
+
+  En cada caso verifica que el bundle no contiene la geometría de iconos no importados. También ejecuta `tsc` sobre `test/types.ts`.
+
+- La prueba se validó rompiendo a propósito el tree-shaking (sin `@__PURE__` y con `sideEffects: true`): falla.

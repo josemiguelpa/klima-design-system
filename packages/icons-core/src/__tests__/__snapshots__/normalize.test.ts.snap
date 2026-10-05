@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`normalizeSvg > matches the clip snapshot 1`] = `"<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g clip-path="url(#clip-a)"><path fill="currentColor" d="M2 2h20v20H2z"/></g><defs><clipPath id="clip-a"><path fill="#fff" d="M2 2h20v20H2z"/></clipPath></defs></svg>"`;
+
+exports[`normalizeSvg > matches the fill snapshot 1`] = `"<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M4 4h16v16H4z"/></svg>"`;
+
+exports[`normalizeSvg > matches the logo snapshot 1`] = `"<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" fill="#1d99cc" rx="4"/><path stroke="#292d32" stroke-width="2" d="M8 12h8"/></svg>"`;
+
+exports[`normalizeSvg > matches the stroke snapshot 1`] = `"<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/><path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M12 8v8"/></svg>"`;
+
+exports[`normalizeSvg > matches the twotone snapshot 1`] = `"<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.5" d="M4 12h16" opacity=".4"/><path stroke="currentColor" stroke-width="1.5" d="M12 4v16"/></svg>"`;

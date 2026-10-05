@@ -34,3 +34,6 @@ Thumbs.db
 # Local agent tooling
 .claude/settings.local.json
 .atl/
+
+# Icon SVG sources pulled from Figma; provenance unconfirmed (see docs/tasks/013-icon-inventory-and-provenance.md)
+packages/icons-core/sources/
