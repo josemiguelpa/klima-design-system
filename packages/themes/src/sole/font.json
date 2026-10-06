@@ -1,0 +1,11 @@
+{
+  "font": {
+    "family": {
+      "base": {
+        "$type": "fontFamily",
+        "$value": "{brand.sole.font.family.base}",
+        "$description": "Solé interface typeface: Montserrat with a system fallback (ADR-006)."
+      }
+    }
+  }
+}

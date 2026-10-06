@@ -1,0 +1,11 @@
+{
+  "font": {
+    "family": {
+      "base": {
+        "$type": "fontFamily",
+        "$value": ["system-ui", "sans-serif"],
+        "$description": "Typeface for all interface text. Neutral system stack by default; brand themes override it with their family (ADR-006). Applications load the font files themselves."
+      }
+    }
+  }
+}

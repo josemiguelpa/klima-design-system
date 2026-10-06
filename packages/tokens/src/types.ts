@@ -75,5 +75,7 @@ export interface AssembledTokens {
   /** Mode the document was assembled for, when the manifest declares modes. */
   mode?: string;
   sources: TokenSource[];
+  /** Layer that declares each token path. */
+  layerByPath: ReadonlyMap<string, TokenLayer>;
   validation: ValidationResult;
 }

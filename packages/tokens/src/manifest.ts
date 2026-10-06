@@ -96,7 +96,7 @@ export function assembleTokens(
     merge(document, sourceDocument, source.path, seen);
   }
   const validation = validateInternal(document, layerByPath);
-  return { document, ...(mode === undefined ? {} : { mode }), sources, validation };
+  return { document, ...(mode === undefined ? {} : { mode }), sources, layerByPath, validation };
 }
 function validateModes(input: TokenManifest, root: string): Diagnostic[] {
   const diagnostics: Diagnostic[] = [];

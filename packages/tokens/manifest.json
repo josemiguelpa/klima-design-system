@@ -14,6 +14,7 @@
     { "layer": "brand", "path": "src/tokens/brands/suno/color.json" },
     { "layer": "brand", "path": "src/tokens/brands/sole/color.json" },
     { "layer": "brand", "path": "src/tokens/brands/sole/font.json" },
+    { "layer": "semantic", "path": "src/tokens/semantic/font.json" },
     { "layer": "semantic", "mode": "light", "path": "src/tokens/semantic/light/color.json" },
     { "layer": "semantic", "mode": "dark", "path": "src/tokens/semantic/dark/color.json" },
     { "layer": "component", "path": "src/tokens/components/button.json" }

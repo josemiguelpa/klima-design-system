@@ -1,0 +1,39 @@
+{
+  "name": "@klima-ds/themes",
+  "version": "0.0.0",
+  "description": "Brand themes for Klima Design System: semantic token values per brand and color scheme",
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "files": [
+    "dist/*.css",
+    "dist/*.css.d.ts"
+  ],
+  "exports": {
+    "./sole.css": {
+      "types": "./dist/sole.css.d.ts",
+      "default": "./dist/sole.css"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "pnpm --filter @klima-ds/tokens build && vitest run",
+    "check:generated": "node scripts/check-generated.mjs",
+    "prepack": "node scripts/build.mjs && node scripts/check-generated.mjs"
+  },
+  "dependencies": {
+    "@klima-ds/tokens": "workspace:*"
+  },
+  "devDependencies": {
+    "@klima-ds/eslint-config": "workspace:*",
+    "@klima-ds/typescript-config": "workspace:*",
+    "@types/node": "^26.6.2",
+    "eslint": "^10.10.0",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.0"
+  }
+}

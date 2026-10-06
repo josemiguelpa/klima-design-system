@@ -1,0 +1,28 @@
+{
+  "color": {
+    "action": {
+      "primary": {
+        "default": {
+          "$type": "color",
+          "$value": "{brand.sole.indigo.400}",
+          "$description": "Solé primary action fill in light mode. Figma component `button`, variant Property 4=Indigo (Sistema de diseño Solé)."
+        },
+        "hover": {
+          "$type": "color",
+          "$value": "{brand.sole.indigo.400}",
+          "$description": "Same as default until design defines a hover state. Figma component `button`, variant Property 4=Indigo (Sistema de diseño Solé)."
+        },
+        "active": {
+          "$type": "color",
+          "$value": "{brand.sole.indigo.400}",
+          "$description": "Same as default until design defines a pressed state. Figma component `button`, variant Property 4=Indigo (Sistema de diseño Solé)."
+        },
+        "foreground": {
+          "$type": "color",
+          "$value": "{brand.sole.green.400}",
+          "$description": "Text and icons on the Solé primary action in light mode. Figma component `button`, variant Property 4=Indigo (Sistema de diseño Solé)."
+        }
+      }
+    }
+  }
+}

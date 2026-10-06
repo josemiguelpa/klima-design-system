@@ -1,0 +1,11 @@
+{
+  "brands": {
+    "sole": {
+      "shared": ["src/sole/font.json"],
+      "modes": {
+        "light": "src/sole/light.json",
+        "dark": "src/sole/dark.json"
+      }
+    }
+  }
+}

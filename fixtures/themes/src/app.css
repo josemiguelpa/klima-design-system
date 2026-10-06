@@ -1,0 +1,95 @@
+/* Application styles: they only consume Klima variables and never redefine them. */
+body {
+  margin: 0;
+  background: var(--klima-color-background-canvas);
+  color: var(--klima-color-text-body);
+  font-family: var(--klima-font-family-base);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: var(--klima-color-background-subtle);
+  border-bottom: 1px solid var(--klima-color-border-subtle);
+}
+
+h1,
+h2 {
+  color: var(--klima-color-text-primary);
+}
+
+.content {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.surface {
+  padding: 1.5rem;
+  background: var(--klima-color-surface-raised);
+  border: 1px solid var(--klima-color-border-default);
+  border-radius: 0.75rem;
+}
+
+.secondary {
+  color: var(--klima-color-text-secondary);
+}
+
+.toggle,
+.action {
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: var(--klima-color-action-primary-default);
+  color: var(--klima-color-action-primary-foreground);
+  font: inherit;
+  cursor: pointer;
+}
+
+.toggle:hover,
+.action:hover {
+  background: var(--klima-color-action-primary-hover);
+}
+
+.toggle:active,
+.action:active {
+  background: var(--klima-color-action-primary-active);
+}
+
+.toggle:focus-visible,
+.action:focus-visible {
+  outline: 2px solid var(--klima-color-border-focus);
+  outline-offset: 2px;
+}
+
+.message {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.success {
+  background: var(--klima-color-feedback-success-background);
+  border: 1px solid var(--klima-color-feedback-success-border);
+  color: var(--klima-color-feedback-success-text);
+}
+
+.info {
+  background: var(--klima-color-feedback-info-background);
+  border: 1px solid var(--klima-color-feedback-info-border);
+  color: var(--klima-color-feedback-info-text);
+}
+
+.warning {
+  background: var(--klima-color-feedback-warning-background);
+  border: 1px solid var(--klima-color-feedback-warning-border);
+  color: var(--klima-color-feedback-warning-text);
+}
+
+.critical {
+  background: var(--klima-color-feedback-critical-background);
+  border: 1px solid var(--klima-color-feedback-critical-border);
+  color: var(--klima-color-feedback-critical-text);
+}

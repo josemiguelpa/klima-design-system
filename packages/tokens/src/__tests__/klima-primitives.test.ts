@@ -25,7 +25,8 @@ const HUES = [
 const KLIMA_ROOTS = [
   "color.neutral.",
   ...HUES.map((hue) => `color.${hue}.`),
-  "font.",
+  "font.size.",
+  "font.weight.",
   "brand.klima.",
   "brand.unergy.",
   "brand.quoiago.",
