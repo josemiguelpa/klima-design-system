@@ -33,7 +33,7 @@ color.background.canvas
 color.background.surface
 color.text.primary
 color.text.inverse
-color.action.primary
+color.action.primary.default
 color.border.subtle
 color.feedback.critical
 ```
@@ -49,6 +49,10 @@ button.primary.foreground
 ```
 
 Evitar crear tokens de componente que solo renombren un semántico sin aportar independencia.
+
+### Modos
+
+Los tokens semánticos y de componente pueden variar por esquema de color. Cada modo vive en su propio archivo (`src/tokens/semantic/<modo>/color.json`) y declara exactamente las mismas rutas que los demás modos; las primitivas son comunes a todos. El manifiesto enumera los modos (`"modes": ["light", "dark"]`) y `assembleTokens(..., { mode })` produce un documento lógico por modo. Ver TASK-008.
 
 ## Fuente y formato
 

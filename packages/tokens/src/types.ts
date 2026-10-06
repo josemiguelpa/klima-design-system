@@ -38,6 +38,12 @@ export interface TokenNode {
 export interface TokenSource {
   layer: TokenLayer;
   path: string;
+  /**
+   * Color scheme this source belongs to. Sources without a mode are shared by
+   * every mode; mode-specific sources are only allowed in the semantic and
+   * component layers and must declare the same token paths in every mode.
+   */
+  mode?: string;
 }
 export type TokenLayer = "global" | "brand" | "semantic" | "component";
 /**
@@ -56,10 +62,18 @@ export const LAYER_RANK: Record<TokenLayer, number> = {
 export interface TokenManifest {
   version: string;
   layers: TokenLayer[];
+  /** Declared modes; the first one is the default for `assembleTokens`. */
+  modes?: string[];
   sources: TokenSource[];
+}
+export interface AssembleOptions {
+  /** Mode to assemble. Defaults to the first mode declared by the manifest. */
+  mode?: string;
 }
 export interface AssembledTokens {
   document: Record<string, unknown>;
+  /** Mode the document was assembled for, when the manifest declares modes. */
+  mode?: string;
   sources: TokenSource[];
   validation: ValidationResult;
 }

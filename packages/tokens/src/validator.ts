@@ -504,6 +504,16 @@ export function validateInternal(
           );
       }
     }
+    // TASK-008: semantic colors express intent through aliases to primitives, never literals.
+    if (info.layer === "semantic" && node.$type === "color" && hasValue && !isAlias(node.$value))
+      add(
+        diagnostic(
+          "semantic.literal-color",
+          path,
+          "Semantic color tokens must alias a primitive instead of declaring a literal color",
+          "$value",
+        ),
+      );
     const value = resolve(info);
     if (
       typeof node.$type === "string" &&

@@ -1,0 +1,319 @@
+{
+  "color": {
+    "background": {
+      "canvas": {
+        "$type": "color",
+        "$value": "{color.neutral.925}",
+        "$description": "Page-level background behind all content. Figma variable semanticas/grey/background/page.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "7109cb2eefa429c7d37925f51c5e3c176cbcfdcc"
+          }
+        }
+      },
+      "subtle": {
+        "$type": "color",
+        "$value": "{color.neutral.900}",
+        "$description": "Low-emphasis page region that separates content from the canvas. Figma variable semanticas/grey/background/subtle.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "b2957c0e8fe1d7c962bcf33ebf94cebfad825099"
+          }
+        }
+      },
+      "sunken": {
+        "$type": "color",
+        "$value": "{color.neutral.950}",
+        "$description": "Recessed page region, such as wells and side panels. Figma variable semanticas/grey/background/sunken.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "a7cbf1969529a81dba3303dcae80d9ae656d8335"
+          }
+        }
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "{color.neutral.50}",
+        "$description": "High-contrast region that inverts the color scheme; pair with color.text.inverse. Figma variable semanticas/grey/background/inverse.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "316e265719d858093694e7e7b46ad6680faf0a6a"
+          }
+        }
+      }
+    },
+    "surface": {
+      "default": {
+        "$type": "color",
+        "$value": "{color.neutral.925}",
+        "$description": "Resting container surface placed on the canvas, such as cards. Figma variable semanticas/grey/surface/base.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "450a085f9cb7d800ad654f75c6147fe2025cb1c7"
+          }
+        }
+      },
+      "raised": {
+        "$type": "color",
+        "$value": "{color.neutral.800}",
+        "$description": "Elevated container surface, such as popovers, menus and dialogs. Figma variable semanticas/grey/surface/raised.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "1bf3abb9214c5c70bbcd49c62b01e588b3077274"
+          }
+        }
+      },
+      "inset": {
+        "$type": "color",
+        "$value": "{color.neutral.950}",
+        "$description": "Container surface recessed inside another surface, such as code blocks. Figma variable semanticas/grey/surface/inset.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "97653f64129ee8cf834e7f3116cfb93130193e67"
+          }
+        }
+      }
+    },
+    "text": {
+      "primary": {
+        "$type": "color",
+        "$value": "{color.neutral.50}",
+        "$description": "Highest-emphasis text: headings and key values. Figma variable semanticas/grey/text/heading.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "49c47a24d57bc5b11d30e949bc0d252b0c5c4151"
+          }
+        }
+      },
+      "body": {
+        "$type": "color",
+        "$value": "{color.neutral.200}",
+        "$description": "Default text for paragraphs and long-form content. Figma variable semanticas/grey/text/body.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "943bed972bed9790b11ba6bd5cd982118a6306fe"
+          }
+        }
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "{color.neutral.400}",
+        "$description": "Supporting text with lower emphasis, such as metadata and helper text. Figma variable semanticas/grey/text/secondary.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "5d061dd67e4970e8a72f76e167d90c3a7b0f3ad6"
+          }
+        }
+      },
+      "disabled": {
+        "$type": "color",
+        "$value": "{color.neutral.700}",
+        "$description": "Text of disabled controls; exempt from contrast requirements and never used for essential information. Figma variable semanticas/grey/text/disabled.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "accd6dfdb732a627335fa02586942cd75959a39e"
+          }
+        }
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "{color.neutral.900}",
+        "$description": "Text placed on color.background.inverse. Figma variable semanticas/grey/text/inverse.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "4f3bee7553b7218a7e991ebed0e4b23f1fdb242c"
+          }
+        }
+      }
+    },
+    "border": {
+      "subtle": {
+        "$type": "color",
+        "$value": "{color.neutral.800}",
+        "$description": "Decorative divider between related content; not a component boundary. Figma variable semanticas/grey/border/subtle.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "df95718f2001e30d73ae6360f0e211dda7efbd87"
+          }
+        }
+      },
+      "default": {
+        "$type": "color",
+        "$value": "{color.neutral.700}",
+        "$description": "Decorative container outline; not sufficient on its own to identify a control. Figma variable semanticas/grey/border/default.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "fccc9c388d8ba992988440e57b95ffc4a6f2be68"
+          }
+        }
+      },
+      "focus": {
+        "$type": "color",
+        "$value": "{color.neutral.50}",
+        "$description": "Focus indicator for interactive elements; meets 3:1 against every background and surface. Figma variable semanticas/grey/border/focus.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "2ba8a962332532de61f4dfa727c4a4b8efc78525"
+          }
+        }
+      }
+    },
+    "action": {
+      "primary": {
+        "default": {
+          "$type": "color",
+          "$value": "{color.neutral.300}",
+          "$description": "Fill of the primary action at rest. Neutral by default; brand themes override it. Figma variable semanticas/grey/interactive/default.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+              "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+              "variableKey": "9b1570c417fc78d7e2af1753dca637d14d0b6537"
+            }
+          }
+        },
+        "hover": {
+          "$type": "color",
+          "$value": "{color.neutral.200}",
+          "$description": "Fill of the primary action while hovered. Figma variable semanticas/grey/interactive/hover.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+              "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+              "variableKey": "8e310fdf725e81dcee1a299ab8adcc193732e11e"
+            }
+          }
+        },
+        "active": {
+          "$type": "color",
+          "$value": "{color.neutral.100}",
+          "$description": "Fill of the primary action while pressed. Figma variable semanticas/grey/interactive/active.",
+          "$extensions": {
+            "software.solenium.figma": {
+              "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+              "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+              "variableKey": "cdbb2916fa6da4da00deeccbafbcaafd2ae4c24a"
+            }
+          }
+        },
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.neutral.900}",
+          "$description": "Text and icons placed on every primary action fill state."
+        }
+      },
+      "disabled": {
+        "$type": "color",
+        "$value": "{color.neutral.700}",
+        "$description": "Fill of disabled actions; exempt from contrast requirements. Figma variable semanticas/grey/interactive/disabled.",
+        "$extensions": {
+          "software.solenium.figma": {
+            "fileKey": "pEieSZyQwDGKiAbeADq3ah",
+            "collectionKey": "61b71f5c956212c846e923de480f87fa9840e276",
+            "variableKey": "d51861f5b647baa637a7b9b4e4d8771329c447b4"
+          }
+        }
+      }
+    },
+    "feedback": {
+      "success": {
+        "text": {
+          "$type": "color",
+          "$value": "{color.mint.200}",
+          "$description": "Text and icons communicating positive outcomes and completed states."
+        },
+        "background": {
+          "$type": "color",
+          "$value": "{color.mint.950}",
+          "$description": "Background of messages communicating positive outcomes and completed states."
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.mint.800}",
+          "$description": "Decorative border of messages communicating positive outcomes and completed states."
+        }
+      },
+      "info": {
+        "text": {
+          "$type": "color",
+          "$value": "{color.royal-blue.200}",
+          "$description": "Text and icons communicating neutral information and progress."
+        },
+        "background": {
+          "$type": "color",
+          "$value": "{color.royal-blue.950}",
+          "$description": "Background of messages communicating neutral information and progress."
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.royal-blue.800}",
+          "$description": "Decorative border of messages communicating neutral information and progress."
+        }
+      },
+      "warning": {
+        "text": {
+          "$type": "color",
+          "$value": "{color.yellow.200}",
+          "$description": "Text and icons communicating conditions that need attention."
+        },
+        "background": {
+          "$type": "color",
+          "$value": "{color.yellow.950}",
+          "$description": "Background of messages communicating conditions that need attention."
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.yellow.800}",
+          "$description": "Decorative border of messages communicating conditions that need attention."
+        }
+      },
+      "critical": {
+        "text": {
+          "$type": "color",
+          "$value": "{color.red.200}",
+          "$description": "Text and icons communicating errors and destructive or blocking conditions."
+        },
+        "background": {
+          "$type": "color",
+          "$value": "{color.red.950}",
+          "$description": "Background of messages communicating errors and destructive or blocking conditions."
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.red.800}",
+          "$description": "Decorative border of messages communicating errors and destructive or blocking conditions."
+        }
+      }
+    }
+  }
+}

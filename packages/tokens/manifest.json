@@ -1,6 +1,7 @@
 {
   "version": "2025.10",
   "layers": ["global", "brand", "semantic", "component"],
+  "modes": ["light", "dark"],
   "sources": [
     { "layer": "global", "path": "src/tokens/global/color.json" },
     { "layer": "global", "path": "src/tokens/global/font.json" },
@@ -13,7 +14,8 @@
     { "layer": "brand", "path": "src/tokens/brands/suno/color.json" },
     { "layer": "brand", "path": "src/tokens/brands/sole/color.json" },
     { "layer": "brand", "path": "src/tokens/brands/sole/font.json" },
-    { "layer": "semantic", "path": "src/tokens/semantic/color.json" },
+    { "layer": "semantic", "mode": "light", "path": "src/tokens/semantic/light/color.json" },
+    { "layer": "semantic", "mode": "dark", "path": "src/tokens/semantic/dark/color.json" },
     { "layer": "component", "path": "src/tokens/components/button.json" }
   ]
 }
