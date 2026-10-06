@@ -57,7 +57,7 @@ Vitest se agrega como `devDependency` raíz para que cualquier paquete pueda dec
 `scripts/verify-manifests.mjs` (`pnpm verify:manifests`) busca paquetes publicables bajo `packages/*` (aquellos sin `"private": true`, ver `docs/architecture.md`). Hoy no existe ninguno, así que el script lo reporta explícitamente y termina en `0`: es lógica de descubrimiento real, no un resultado fijo que simule éxito. En cuanto exista un paquete publicable bajo `packages/`, el script ejecutará contra él:
 
 - [`publint`](https://publint.dev/): valida que el `package.json` (exports, tipos, `main`, etc.) sea consumible por distintos bundlers y runtimes.
-- [`@arethetypeswrong/cli`](https://github.com/arethetypeswrong/arethetypeswrong.github.io) (`attw --pack`): valida que los tipos declarados coincidan con lo que el paquete realmente exporta una vez empaquetado.
+- [`@arethetypeswrong/cli`](https://github.com/arethetypeswrong/arethetypeswrong.github.io) (`attw --pack --profile esm-only`): valida que los tipos declarados coincidan con lo que el paquete realmente exporta una vez empaquetado. Usa el perfil `esm-only` porque todos los paquetes son ESM-only: omite `node10` (sin soporte de `exports`) y `require` desde CommonJS.
 
 ## Higiene del repositorio
 

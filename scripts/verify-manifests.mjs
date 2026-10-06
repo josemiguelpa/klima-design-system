@@ -60,7 +60,12 @@ let failed = false;
 for (const target of targets) {
   try {
     run("publint", "pnpm", ["exec", "publint", target], rootDir);
-    run("@arethetypeswrong/cli", "pnpm", ["exec", "attw", "--pack", target], rootDir);
+    run(
+      "@arethetypeswrong/cli",
+      "pnpm",
+      ["exec", "attw", "--pack", target, "--profile", "esm-only"],
+      rootDir,
+    );
   } catch (error) {
     failed = true;
     console.error(`FAIL manifest validation failed for ${target}: ${error.message}`);
