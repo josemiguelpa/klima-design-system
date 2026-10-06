@@ -1,4 +1,4 @@
-// Minimal static CSS cascade for custom properties declared on the root element (TASK-010).
+// Copied from fixtures/themes/test/cascade.js. Minimal static CSS cascade for custom properties declared on the root element (TASK-010).
 // It supports exactly the selector forms Klima generates and throws on anything else, so a new
 // selector shape fails loudly instead of being silently ignored.
 

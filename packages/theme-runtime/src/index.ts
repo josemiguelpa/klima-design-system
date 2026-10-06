@@ -201,3 +201,4 @@ export function createWhiteLabelTheme(input: unknown): WhiteLabelResult {
     ? { ok: false, diagnostics }
     : { ok: true, theme, diagnostics };
 }
+export * from "./serialize.js";

@@ -1,0 +1,32 @@
+/* Application styles: they only consume Klima variables and never redefine them. */
+body {
+  margin: 0;
+  background: var(--klima-color-background-canvas);
+  color: var(--klima-color-text-body);
+  font-family: var(--klima-font-family-base);
+}
+
+.content {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.status {
+  color: var(--klima-color-text-secondary);
+}
+
+.action {
+  justify-self: start;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: var(--klima-color-action-primary-default);
+  color: var(--klima-color-action-primary-foreground);
+  font: inherit;
+}
+
+.action:focus-visible {
+  outline: 2px solid var(--klima-color-border-focus);
+  outline-offset: 2px;
+}

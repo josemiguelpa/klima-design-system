@@ -258,23 +258,37 @@ describe("non-text contrast against the canvas", () => {
 describe("SSR safety", () => {
   const dist = fileURLToPath(new URL("../../dist", import.meta.url));
 
-  it("ships no DOM or browser storage access", () => {
-    for (const file of readdirSync(dist).filter((name) => name.endsWith(".js")))
-      expect(readFileSync(`${dist}/${file}`, "utf8")).not.toMatch(
-        /\b(document|window|localStorage|sessionStorage|navigator|CSS)\b/,
+  it("ships no DOM or browser storage access outside the ./dom entry point", () => {
+    for (const file of readdirSync(dist).filter(
+      (name) => name.endsWith(".js") && name !== "dom.js",
+    ))
+      expect(readFileSync(`${dist}/${file}`, "utf8"), file).not.toMatch(
+        /\b(document|window|localStorage|sessionStorage|navigator)\b|\bCSS\.[a-z]/,
       );
   });
 
   it("runs in a plain Node process without a DOM", () => {
     const script = [
-      `const { createWhiteLabelTheme } = await import(${JSON.stringify(`${dist}/index.js`)});`,
+      `const { createWhiteLabelTheme, serializeWhiteLabelTheme } = await import(${JSON.stringify(`${dist}/index.js`)});`,
+      `const { applyWhiteLabelTheme } = await import(${JSON.stringify(`${dist}/dom.js`)});`,
       'if (typeof document !== "undefined") throw new Error("unexpected DOM");',
-      'console.log(JSON.stringify(createWhiteLabelTheme({ primaryColor: "#2244a8" }).ok));',
+      'const result = createWhiteLabelTheme({ primaryColor: "#2244a8" });',
+      "const css = serializeWhiteLabelTheme(result.theme);",
+      "let applyError = '';",
+      "try { applyWhiteLabelTheme(result.theme); } catch (error) { applyError = error.message; }",
+      "console.log(JSON.stringify({ ok: result.ok, css: css.includes('--klima-color-action-primary-default'), applyError }));",
     ].join("\n");
     expect(
       execFileSync(process.execPath, ["--input-type=module", "-e", script], {
         encoding: "utf8",
       }).trim(),
-    ).toBe("true");
+    ).toBe(
+      JSON.stringify({
+        ok: true,
+        css: true,
+        applyError:
+          "applyWhiteLabelTheme needs a document; during SSR use serializeWhiteLabelTheme instead",
+      }),
+    );
   });
 });

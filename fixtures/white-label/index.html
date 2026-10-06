@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es" data-brand="sole" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>White-label fixture</title>
+  </head>
+  <body>
+    <main class="content">
+      <label>
+        Color primario del tenant
+        <input type="color" value="#2244a8" data-tenant-color />
+      </label>
+      <p class="status" data-tenant-status role="status"></p>
+      <button type="button" class="action" data-theme-toggle aria-pressed="false">
+        Modo oscuro
+      </button>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

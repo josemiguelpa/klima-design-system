@@ -37,5 +37,6 @@ Las tareas canceladas o supersedidas no son ejecutables, aunque permanezcan en e
 15. `015-react-icons-and-tree-shaking.md`
 16. `016-klima-primitives.md` — primitivas de color y tipografía de Klima y Klimaverso
 17. `017-vue-astro-icons.md` — iconos para Vue y Astro
+18. `018-theme-runtime-dom.md` — serialización y aplicación del white-label en el DOM
 
 Después se detallan Vue/Astro, Storybook y componentes usando `docs/task-template.md`, cuando las fundaciones estén validadas.

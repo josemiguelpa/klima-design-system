@@ -38,6 +38,37 @@ Estas equivalencias describen roles o activos de migración, no compatibilidad a
 | Componentes     | Rehacer composición, props, estilos y comportamiento según el contrato Klima; el `Header` histórico no es API adoptada. |
 | CSS coexistente | Aislar y coordinar los estilos durante la transición; Klima no importa CSS legacy ni evita colisiones automáticamente.  |
 
+## White-label en runtime
+
+Evidencia: `@solenium-software/design-system@0.2.2`, `dist/theme/index.js`, y sus usos en sunboarding (`useOnboardingTheme`, `useLifelineTheme`) y supply (`routes/__root.tsx`). Destino: `@klima-ds/theme-runtime` (TASK-012 y TASK-018).
+
+| Legacy                                              | Klima                                                                                                         |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `injectTheme({ primary_color, secondary_color })`   | `createWhiteLabelTheme({ primaryColor, secondaryColor })` y, si `ok`, `applyWhiteLabelTheme(theme)`           |
+| `generateThemeCss(options, selector, darkSelector)` | `serializeWhiteLabelTheme(theme)` para SSR, dentro de `<style nonce>`                                         |
+| `styleId` (por defecto `solenium-dynamic-theme`)    | Opción `id` (por defecto `klima-white-label`), más `nonce` opcional                                           |
+| `selector: ":root"`, `darkSelector: ".dark"`        | Selectores fijos `:root[data-white-label]` y `[data-theme="dark"]`; `applyWhiteLabelTheme` activa el atributo |
+| Sin `document`: advertencia y no hace nada          | Sin `document`: error explícito; en SSR se usa `serializeWhiteLabelTheme`                                     |
+
+```ts
+import { createWhiteLabelTheme } from "@klima-ds/theme-runtime";
+import { applyWhiteLabelTheme } from "@klima-ds/theme-runtime/dom";
+
+const result = createWhiteLabelTheme({
+  primaryColor: company.primary_color,
+  secondaryColor: company.secondary_color,
+});
+if (result.ok) applyWhiteLabelTheme(result.theme, { nonce });
+else reportThemeDiagnostics(result.diagnostics); // decisión de la aplicación
+```
+
+Adaptaciones manuales:
+
+- **Fallbacks propios.** El fallback que sunboarding aplicaba con `CSS.supports` deja de ser necesario para validar: un color inválido devuelve `ok: false`. La aplicación decide qué hacer en ese caso: mantener el tema de marca o mostrar un aviso.
+- **Contraste insuficiente.** `#915BD8`, fallback de primario en sunboarding, no alcanza 4.5:1 con ningún foreground y devuelve `contrast.foreground-unavailable`. Ese tenant necesita otro color.
+- **Variables sin destino en el runtime.** Las variables shadcn (`--primary`, `--ring`, `--chart-*`…), `--brand-*` y `--button-*` del legacy no tienen equivalente aquí. Las variables shadcn corresponden al futuro adapter shadcn.
+- **Variables propias de la aplicación.** Variables como `--company-primary` o `--file-button-bg`, que la aplicación escribía en `document.documentElement.style`, deben pasar a consumir `var(--klima-color-action-primary-default)`.
+
 ## Casos sin soporte
 
 - Aliases públicos legacy de CSS, TypeScript o iconos.
