@@ -37,5 +37,5 @@ Una aplicación suele usar uno o dos estilos. Una prop `variant` obligaría a in
 ## Consecuencias
 
 - El bundle contiene solo los estilos e iconos importados; `fixtures/react-vite` lo verifica.
-- Vue, Astro y Vanilla siguen el mismo esquema de rutas.
+- Vue y Astro siguen el mismo esquema de rutas (TASK-017); Vanilla lo seguirá cuando se implemente.
 - Combinar estilos en un mismo archivo requiere alias de import.

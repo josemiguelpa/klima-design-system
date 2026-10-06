@@ -10,81 +10,72 @@ import type { IconNode } from "./normalize.js";
 /** Compact element tuple consumed by the runtime: [tag, attributes, children?]. */
 type NodeTuple = [string, Record<string, string>, NodeTuple[]?];
 
-const SPECIAL_ATTRIBUTES: Readonly<Record<string, string>> = {
-  class: "className",
-  "xlink:href": "xlinkHref",
-  "xml:space": "xmlSpace",
-};
-
-/** Converts SVG attribute names to React props; `aria-*` and `data-*` stay kebab-case. */
-export function reactAttributeName(name: string): string {
-  if (SPECIAL_ATTRIBUTES[name]) return SPECIAL_ATTRIBUTES[name];
-  if (name.startsWith("aria-") || name.startsWith("data-")) return name;
-  return name.replace(/[-:]([a-z])/g, (_, letter: string) => letter.toUpperCase());
-}
-
-function reactAttributes(attrs: Record<string, string>): Record<string, string> {
-  return Object.fromEntries(
-    Object.entries(attrs)
-      .filter(([name]) => !name.startsWith("xmlns:"))
-      .map(([name, value]) => [reactAttributeName(name), value]),
-  );
-}
-
+// Vue passes SVG attributes through unchanged, so names stay kebab-case.
 function toTuple(node: IconNode): NodeTuple {
-  const attrs = reactAttributes(node.attrs);
+  const attrs = rootDefaults(node);
   return node.children.length > 0
     ? [node.tag, attrs, node.children.map(toTuple)]
     : [node.tag, attrs];
 }
 
-const RUNTIME_JS = `${HEADER}import { createElement, forwardRef, useId } from "react";
+const RUNTIME_JS = `${HEADER}import { defineComponent, h, useId } from "vue";
 
-function renderNode(node, key) {
+function renderNode(node) {
   const [tag, attrs, children] = node;
-  return createElement(tag, { key, ...attrs }, children ? children.map(renderNode) : undefined);
+  return h(tag, attrs, children ? children.map(renderNode) : undefined);
 }
 
-export function createIcon(displayName, rootAttrs, nodes) {
-  const Icon = forwardRef(function Icon({ size = 24, title, children, ...props }, ref) {
-    const titleId = useId();
-    const accessibility = title
-      ? { role: "img", "aria-labelledby": titleId }
-      : { "aria-hidden": true, focusable: "false" };
-    return createElement(
-      "svg",
-      { ...rootAttrs, width: size, height: size, ...accessibility, ...props, ref },
-      title ? createElement("title", { id: titleId }, title) : null,
-      nodes.map(renderNode),
-      children,
-    );
+export function createIcon(name, rootAttrs, nodes) {
+  return defineComponent({
+    name,
+    inheritAttrs: false,
+    props: {
+      size: { type: [Number, String], default: 24 },
+      title: { type: String, default: undefined },
+    },
+    setup(props, { attrs, slots }) {
+      const titleId = useId();
+      return () => {
+        const accessibility = props.title
+          ? { role: "img", "aria-labelledby": titleId }
+          : { "aria-hidden": "true", focusable: "false" };
+        return h(
+          "svg",
+          { ...rootAttrs, width: props.size, height: props.size, ...accessibility, ...attrs },
+          [
+            props.title ? h("title", { id: titleId }, props.title) : null,
+            ...nodes.map(renderNode),
+            slots.default?.(),
+          ],
+        );
+      };
+    },
   });
-  Icon.displayName = displayName;
-  return Icon;
 }
 `;
 
-const RUNTIME_DTS = `${HEADER}import type { ForwardRefExoticComponent, RefAttributes, SVGProps } from "react";
+const RUNTIME_DTS = `${HEADER}import type { DefineComponent } from "vue";
 
-export interface IconProps extends Omit<SVGProps<SVGSVGElement>, "ref"> {
+export interface IconProps {
   /** Width and height of the icon. Defaults to 24. */
   size?: number | string;
   /** Accessible name. Without a title the icon is decorative and hidden from assistive technology. */
   title?: string;
 }
 
-export type IconComponent = ForwardRefExoticComponent<IconProps & RefAttributes<SVGSVGElement>>;
+/** Other attributes (class, style, stroke-width, aria-*) fall through to the <svg> element. */
+export type IconComponent = DefineComponent<IconProps>;
 
 /** @internal */
 export declare function createIcon(
-  displayName: string,
+  name: string,
   rootAttrs: Record<string, string>,
   nodes: readonly unknown[],
 ): IconComponent;
 `;
 
-/** Returns the generated package files keyed by path relative to the output directory. */
-export function renderReact(styles: readonly GeneratedStyle[]): Map<string, string> {
+/** Returns the generated @klima-ds/icons-vue files keyed by path relative to dist/. */
+export function renderVue(styles: readonly GeneratedStyle[]): Map<string, string> {
   const files = new Map<string, string>([
     ["create-icon.js", RUNTIME_JS],
     ["create-icon.d.ts", RUNTIME_DTS],
@@ -95,7 +86,7 @@ export function renderReact(styles: readonly GeneratedStyle[]): Map<string, stri
     for (const icon of sorted) {
       const file = `${style}/${icon.name}`;
       assertSupportedIcon(icon.node, file);
-      const root = reactAttributes(rootDefaults(icon.node));
+      const root = rootDefaults(icon.node);
       const nodes = icon.node.children.map(toTuple);
       files.set(
         `${file}.js`,

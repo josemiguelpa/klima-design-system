@@ -1,0 +1,80 @@
+{
+  "name": "@klima-ds/icons-vue",
+  "version": "0.0.0",
+  "description": "Tree-shakeable Vue icon components for Klima Design System",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./linear": {
+      "types": "./dist/linear/index.d.ts",
+      "import": "./dist/linear/index.js",
+      "default": "./dist/linear/index.js"
+    },
+    "./linear/*": {
+      "types": "./dist/linear/*.d.ts",
+      "import": "./dist/linear/*.js",
+      "default": "./dist/linear/*.js"
+    },
+    "./bold": {
+      "types": "./dist/bold/index.d.ts",
+      "import": "./dist/bold/index.js",
+      "default": "./dist/bold/index.js"
+    },
+    "./bold/*": {
+      "types": "./dist/bold/*.d.ts",
+      "import": "./dist/bold/*.js",
+      "default": "./dist/bold/*.js"
+    },
+    "./twotone": {
+      "types": "./dist/twotone/index.d.ts",
+      "import": "./dist/twotone/index.js",
+      "default": "./dist/twotone/index.js"
+    },
+    "./twotone/*": {
+      "types": "./dist/twotone/*.d.ts",
+      "import": "./dist/twotone/*.js",
+      "default": "./dist/twotone/*.js"
+    },
+    "./bulk": {
+      "types": "./dist/bulk/index.d.ts",
+      "import": "./dist/bulk/index.js",
+      "default": "./dist/bulk/index.js"
+    },
+    "./bulk/*": {
+      "types": "./dist/bulk/*.d.ts",
+      "import": "./dist/bulk/*.js",
+      "default": "./dist/bulk/*.js"
+    },
+    "./broken": {
+      "types": "./dist/broken/index.d.ts",
+      "import": "./dist/broken/index.js",
+      "default": "./dist/broken/index.js"
+    },
+    "./broken/*": {
+      "types": "./dist/broken/*.d.ts",
+      "import": "./dist/broken/*.js",
+      "default": "./dist/broken/*.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "lint": "eslint .",
+    "test": "pnpm --filter @klima-ds/icons-core build && node scripts/build.mjs && vitest run",
+    "prepublishOnly": "node scripts/check-publishable.mjs"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "@klima-ds/eslint-config": "workspace:*",
+    "@klima-ds/icons-core": "workspace:*",
+    "@vue/server-renderer": "^3.5.43",
+    "eslint": "^10.10.0",
+    "vitest": "^5.0.0",
+    "vue": "^3.5.43"
+  }
+}

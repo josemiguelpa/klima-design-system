@@ -1,0 +1,20 @@
+{
+  "name": "vue-vite-fixture",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "pnpm --filter \"@klima-ds/icons-vue...\" build && vitest run"
+  },
+  "devDependencies": {
+    "@klima-ds/eslint-config": "workspace:*",
+    "@klima-ds/icons-vue": "workspace:*",
+    "@klima-ds/typescript-config": "workspace:*",
+    "eslint": "^10.12.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.2",
+    "vitest": "^5.0.3",
+    "vue": "^3.5.43"
+  }
+}

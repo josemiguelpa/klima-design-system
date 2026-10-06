@@ -5,3 +5,7 @@ packages:
   - "fixtures/*"
 
 engineStrict: true
+
+# Dependency build scripts stay disabled unless explicitly reviewed.
+allowBuilds:
+  esbuild: false

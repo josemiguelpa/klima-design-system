@@ -1,0 +1,19 @@
+{
+  "name": "astro-fixture",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "pnpm --filter \"@klima-ds/icons-astro...\" build && vitest run"
+  },
+  "devDependencies": {
+    "@klima-ds/eslint-config": "workspace:*",
+    "@klima-ds/icons-astro": "workspace:*",
+    "@klima-ds/typescript-config": "workspace:*",
+    "astro": "7.3.5",
+    "eslint": "^10.12.0",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.3"
+  }
+}

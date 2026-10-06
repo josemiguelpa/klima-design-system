@@ -1,0 +1,9 @@
+{
+  "extends": "@klima-ds/typescript-config/library.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "lib": ["ES2022", "DOM"],
+    "types": []
+  },
+  "include": ["test/types.ts"]
+}

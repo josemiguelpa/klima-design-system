@@ -3,8 +3,8 @@
 // Without pulled sources (e.g. CI) it builds a synthetic, never-publishable set.
 
 import { fileURLToPath } from "node:url";
-import { collectStyles, renderReact, writeBuild } from "@klima-ds/icons-core";
+import { collectStyles, renderAstro, writeBuild } from "@klima-ds/icons-core";
 
 const outDir = fileURLToPath(new URL("../dist", import.meta.url));
-const { styles, buildInfo } = await collectStyles("icons-react");
-await writeBuild("icons-react", outDir, renderReact(styles), buildInfo);
+const { styles, buildInfo } = await collectStyles("icons-astro");
+await writeBuild("icons-astro", outDir, renderAstro(styles), buildInfo);
