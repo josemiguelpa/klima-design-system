@@ -29,16 +29,20 @@ export const CONTRAST_PAIRS: readonly ContrastPair[] = [
     textSurfaces.map((background) => ({ foreground, background, kind: "text" as const })),
   ),
   { foreground: "color.text.inverse", background: "color.background.inverse", kind: "text" },
-  ...["default", "hover", "active"].map((state) => ({
-    foreground: "color.action.primary.foreground",
-    background: `color.action.primary.${state}`,
-    kind: "text" as const,
-  })),
-  ...["default", "hover", "active"].map((state) => ({
-    foreground: `color.action.primary.${state}`,
-    background: "color.background.canvas",
-    kind: "non-text" as const,
-  })),
+  ...["primary", "secondary"].flatMap((action) =>
+    ["default", "hover", "active"].flatMap((state) => [
+      {
+        foreground: `color.action.${action}.foreground`,
+        background: `color.action.${action}.${state}`,
+        kind: "text" as const,
+      },
+      {
+        foreground: `color.action.${action}.${state}`,
+        background: "color.background.canvas",
+        kind: "non-text" as const,
+      },
+    ]),
+  ),
   ...textSurfaces.map((background) => ({
     foreground: "color.border.focus",
     background,

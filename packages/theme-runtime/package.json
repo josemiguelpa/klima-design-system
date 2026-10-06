@@ -1,0 +1,36 @@
+{
+  "name": "@klima-ds/theme-runtime",
+  "version": "0.0.0",
+  "description": "Validated white-label themes for Klima Design System, built at runtime from tenant brand colors",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "pnpm --filter @klima-ds/tokens build && tsc -p tsconfig.build.json && vitest run"
+  },
+  "dependencies": {
+    "@klima-ds/tokens": "workspace:*"
+  },
+  "devDependencies": {
+    "@klima-ds/eslint-config": "workspace:*",
+    "@klima-ds/typescript-config": "workspace:*",
+    "@types/node": "^26.6.2",
+    "eslint": "^10.10.0",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.0"
+  }
+}

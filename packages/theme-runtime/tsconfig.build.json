@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    // SSR guarantee: no DOM (lib is ES2022 only) and no Node types in the published runtime.
+    "types": []
+  },
+  "exclude": ["src/__tests__"]
+}

@@ -232,6 +232,28 @@
           "$description": "Text and icons placed on every primary action fill state."
         }
       },
+      "secondary": {
+        "default": {
+          "$type": "color",
+          "$value": "{color.neutral.500}",
+          "$description": "Fill of the secondary action at rest. Neutral by default; brand themes and white-label override it."
+        },
+        "hover": {
+          "$type": "color",
+          "$value": "{color.neutral.600}",
+          "$description": "Fill of the secondary action while hovered."
+        },
+        "active": {
+          "$type": "color",
+          "$value": "{color.neutral.700}",
+          "$description": "Fill of the secondary action while pressed."
+        },
+        "foreground": {
+          "$type": "color",
+          "$value": "{color.neutral.0}",
+          "$description": "Text and icons placed on every secondary action fill state."
+        }
+      },
       "disabled": {
         "$type": "color",
         "$value": "{color.neutral.200}",
