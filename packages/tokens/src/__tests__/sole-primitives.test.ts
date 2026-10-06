@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { assembleTokens } from "../index.js";
+import { assembleTokens } from "../tooling.js";
 
 type Obj = Record<string, unknown>;
 interface Leaf {

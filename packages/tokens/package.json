@@ -1,29 +1,40 @@
 {
   "name": "@klima-ds/tokens",
   "version": "0.0.0",
-  "description": "DTCG token sources and validation for Klima Design System",
+  "description": "Design tokens for Klima Design System: DTCG sources, CSS custom properties and TypeScript values",
   "type": "module",
-  "sideEffects": false,
+  "sideEffects": [
+    "*.css"
+  ],
   "files": [
     "dist",
     "src/tokens",
     "manifest.json"
   ],
   "main": "./dist/index.js",
-  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
       "default": "./dist/index.js"
-    }
+    },
+    "./css": {
+      "types": "./dist/tokens.css.d.ts",
+      "default": "./dist/tokens.css"
+    },
+    "./tooling": {
+      "types": "./dist/tooling.d.ts",
+      "default": "./dist/tooling.js"
+    },
+    "./package.json": "./package.json"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
+    "build": "node scripts/build.mjs",
     "lint": "eslint .",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "check:generated": "node scripts/check-generated.mjs",
+    "prepack": "node scripts/build.mjs && node scripts/check-generated.mjs"
   },
   "devDependencies": {
     "@klima-ds/eslint-config": "workspace:*",

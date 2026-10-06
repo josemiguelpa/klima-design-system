@@ -9,7 +9,7 @@ import {
   validateTokenDocument,
   type TokenLayer,
   type TokenManifest,
-} from "../index.js";
+} from "../tooling.js";
 const validateManifestForTest = validateManifest;
 
 describe("token contract", () => {

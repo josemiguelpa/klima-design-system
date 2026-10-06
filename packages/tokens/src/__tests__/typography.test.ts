@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { validateInternal, validateTokenDocument, type TokenLayer } from "../index.js";
+import { validateInternal, validateTokenDocument, type TokenLayer } from "../tooling.js";
 
 const px = (value: number) => ({ value, unit: "px" });
 const primitives = {

@@ -17,7 +17,7 @@ import {
   validateManifest,
   type TokenLayer,
   type TokenManifest,
-} from "../index.js";
+} from "../tooling.js";
 
 type Obj = Record<string, unknown>;
 const modes = (manifest as TokenManifest).modes ?? [];
